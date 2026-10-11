@@ -94,8 +94,9 @@ phones), then About Patrick (Vince, 2026-10-11).
 ## Design (already decided — do not change without asking)
 - Palette is in `data.json.site.design`. Base plum `#4E2951` was sampled from
   Patrick's shirt in the hero photo; it is NOT the Canva flyer teal and NOT the
-  Vikings' official purple. Gold `#FFC62F` appears in exactly two places: the
-  primary button and the burial "arrive early" warning.
+  Vikings' official purple. Gold `#FFC62F` is reserved for primary action buttons (When and where, Send to
+  the family, Give through GoFundMe — Vince, 2026-10-11) and the burial "arrive
+  early" warning.
 - Type: Fraunces (display, weight 300) + Lora (body, 19px). Google Fonts.
 - Hero: the family photo, uncropped at its native 3:2 ratio. Phones: full width
   with the plum fading up from the bottom into the name. Desktop (≥960px): two
