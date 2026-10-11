@@ -114,9 +114,8 @@ phones), then About Patrick (Vince, 2026-10-11).
 - ✅ Burial venue confirmed as Tahoma National Cemetery (`events.interment`)
 - Higher-resolution copy of the hero family photo (current one is 960×640)
 - A better portrait for the About section
-- ⛔ `giving.url` set (sister's GoFundMe), or Give section hidden. Shown now as a
-  placeholder at Vince's request (2026-10-11); confirm the purposes line and the
-  "card at the viewing" line with the family
+- ✅ `giving.url` set to the sister's GoFundMe (2026-10-11). Still confirm the
+  purposes line and the "card at the viewing" line with the family
 - Rosary time (9:00 vs 9:15) and placement of Words of Remembrance confirmed
   with Father Tuan (`program.*`)
 - Readers, readings, hymns filled in or section labeled "to be announced"
