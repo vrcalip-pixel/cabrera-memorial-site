@@ -11,6 +11,6 @@ He married Mary on June 17, 1985, and they spent forty-one years together. Ask M
 
 His faith was the quiet center of all of it. He and Mary prayed the rosary together every day, and whatever devotion she took up — the Divine Mercy chaplet, the novenas — he was beside her for it. In Germany in 1985, given a temporary house with more bedrooms than they knew what to do with, the family turned one of them into a prayer room. He wanted nothing more for his children and grandchildren than that they would know the Church he loved.
 
-Patrick is survived by his wife, Mary; his children, [TBD]; his grandchildren, [TBD]; his siblings, [TBD]; and nieces, nephews, and cousins in Washington, Guam, and beyond. He was preceded in death by his parents and his siblings [TBD].
+Patrick is survived by his wife, Mary; his children and grandchildren; his siblings; and nieces, nephews, and cousins in Washington, Guam, and beyond. He was preceded in death by his parents and some of his siblings.
 
 He was a simple, humble man who asked for little and gave his family everything. We will miss him at breakfast.
