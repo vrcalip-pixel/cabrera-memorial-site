@@ -127,6 +127,7 @@ const giving = !g.show ? '' : [
   isTBD(g.url)
     ? `      <p><span class="btn btn-placeholder" aria-disabled="true">${esc(g.buttonLabel)}</span> <span class="tbd">Link coming soon</span></p>`
     : `      <p><a class="btn gold" href="${esc(g.url)}">${esc(g.buttonLabel)}</a></p>`,
+  isTBD(g.url) || isTBD(g.tipNote) ? '' : `      <p class="small muted tip-note">${esc(g.tipNote)}</p>`,
   isTBD(g.inPerson) ? '' : `      <p>${esc(g.inPerson)}</p>`,
   isTBD(g.closing) ? '' : `      <p class="lede-small" lang="ch">${esc(g.closing)}</p>`,
   '    </div>',
