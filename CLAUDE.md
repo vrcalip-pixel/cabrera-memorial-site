@@ -56,6 +56,8 @@ First task when you open this repo:
    clearly commented HTML blocks that map 1:1 to data.json keys. Vince's
    preference is the build script — he wants to change a date in one place.
 4. Add a `netlify.toml` and deploy. Confirm the live URL works on a phone.
+   (Done on GitHub Pages instead: https://cabrera-memorial.com — custom domain
+   via Namecheap DNS, 2026-10-11. The old github.io link redirects there.)
 
 ## Stack (keep it simple)
 - **Plain static HTML/CSS/JS.** No framework. `data.json` and `content/*.md`
