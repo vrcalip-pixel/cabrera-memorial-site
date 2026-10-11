@@ -104,7 +104,7 @@ First task when you open this repo:
 
 ## Launch checklist (block launch on items marked ⛔)
 - ✅ Viewing confirmed: Wed Oct 14, Mountain View Funeral Home, Lakewood
-- ⛔ Burial venue confirmed as Tahoma National Cemetery (`events.interment`)
+- ✅ Burial venue confirmed as Tahoma National Cemetery (`events.interment`)
 - Higher-resolution copy of the hero family photo (current one is 960×640)
 - A better portrait for the About section
 - ⛔ `giving.url` set, or Give section hidden

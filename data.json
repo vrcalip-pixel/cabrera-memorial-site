@@ -73,9 +73,10 @@
       "start": "10:00",
       "arrivalTime": "09:30",
       "timeDisplay": "10:00 AM · Please arrive by 9:30 AM",
-      "venueName": "TBD — believed to be Tahoma National Cemetery, Kent, WA",
+      "venueName": "Tahoma National Cemetery",
+      "city": "Kent, WA",
       "address": "TBD",
-      "mapUrl": "TBD",
+      "mapUrl": "https://maps.google.com/?q=Tahoma+National+Cemetery,+Kent,+WA",
       "warning": "The cemetery runs on a strict military schedule and cannot hold a service for late arrivals. It is a Friday morning — allow extra time for traffic and construction, and plan to leave early.",
       "notes": "Military honors will be rendered."
     }
