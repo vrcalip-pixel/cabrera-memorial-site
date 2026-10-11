@@ -116,16 +116,21 @@ const cards = Object.entries(data.events).map(([key, ev]) => {
 // button renders as a clearly marked, non-clickable placeholder.
 const g = data.giving || {};
 const givingNav = g.show ? '      <li><a href="#give">Ways to help</a></li>\n' : '';
+// Optional giving.photo sits beside the text on desktop and below it on phones.
+const gp = g.photo && !isTBD(g.photo.src) ? g.photo : null;
 const giving = !g.show ? '' : [
   '<section id="give">',
-  '  <div class="wrap">',
-  `    <h2>${show(g.headline)}</h2>`,
-  isTBD(g.text) ? '' : `    <p>${esc(g.text)}</p>`,
+  `  <div class="wrap${gp ? ' give-grid' : ''}">`,
+  '    <div class="give-text">',
+  `      <h2>${show(g.headline)}</h2>`,
+  isTBD(g.text) ? '' : `      <p>${esc(g.text)}</p>`,
   isTBD(g.url)
-    ? `    <p><span class="btn btn-placeholder" aria-disabled="true">${esc(g.buttonLabel)}</span> <span class="tbd">Link coming soon</span></p>`
-    : `    <p><a class="btn gold" href="${esc(g.url)}">${esc(g.buttonLabel)}</a></p>`,
-  isTBD(g.inPerson) ? '' : `    <p>${esc(g.inPerson)}</p>`,
-  isTBD(g.closing) ? '' : `    <p class="lede-small" lang="ch">${esc(g.closing)}</p>`,
+    ? `      <p><span class="btn btn-placeholder" aria-disabled="true">${esc(g.buttonLabel)}</span> <span class="tbd">Link coming soon</span></p>`
+    : `      <p><a class="btn gold" href="${esc(g.url)}">${esc(g.buttonLabel)}</a></p>`,
+  isTBD(g.inPerson) ? '' : `      <p>${esc(g.inPerson)}</p>`,
+  isTBD(g.closing) ? '' : `      <p class="lede-small" lang="ch">${esc(g.closing)}</p>`,
+  '    </div>',
+  gp ? `    <figure class="give-photo"><img src="${esc(gp.src)}" alt="${esc(gp.alt)}" width="${gp.width}" height="${gp.height}" loading="lazy" decoding="async"></figure>` : '',
   '  </div>',
   '</section>',
 ].filter(Boolean).join('\n') + '\n';

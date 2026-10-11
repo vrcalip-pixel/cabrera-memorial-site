@@ -75,6 +75,9 @@ section{padding:3.5rem 0;border-top:1px solid rgba(246,241,231,.14)}
 #about{background:linear-gradient(170deg,var(--plum-light) 0%,var(--plum-mid) 100%)}
 #memories{background:linear-gradient(to bottom,var(--purple) 0%,var(--plum-low) 100%)}
 #give{background:linear-gradient(170deg,var(--plum-light) 0%,var(--plum-mid) 100%)}
+.give-photo{margin:2rem 0 0}
+.give-photo img{width:100%;height:auto;border-radius:.6rem;box-shadow:0 12px 32px rgba(20,8,20,.35)}
+@media (min-width:60rem){.give-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3.5rem;align-items:center}.give-photo{margin:0}}
 .btn-placeholder{opacity:.6;cursor:not-allowed;margin-right:.5rem}
 .lede-small{font-style:italic;color:var(--ivory-dim)}
 h2{font-family:var(--display);font-weight:300;font-size:clamp(2rem,4.5vw,2.75rem);line-height:1.05;margin:0 0 1.75rem;letter-spacing:-.01em}

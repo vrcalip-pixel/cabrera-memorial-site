@@ -164,6 +164,12 @@
     "buttonLabel": "Donate to the Family",
     "inPerson": "If you'd rather bring a card to the viewing or the Mass, there will be a place for it there.",
     "closing": "Si Yu'os ma'åse'.",
+    "photo": {
+      "src": "photos/family-backyard.jpg",
+      "alt": "Patrick seated on a wooden bench in a sunny backyard, surrounded by smiling family",
+      "width": 1200,
+      "height": 900
+    },
     "_note": "GoFundMe link from Vince (2026-10-11). Still confirm the purposes line and the card line with the family."
   },
   "memories": {
