@@ -114,6 +114,10 @@ phones), then About Patrick (Vince, 2026-10-11).
 - ✅ Burial venue confirmed as Tahoma National Cemetery (`events.interment`)
 - Higher-resolution copy of the hero family photo (current one is 960×640)
 - A better portrait for the About section
+- Photo carousel in About (after the bio): tabled 2026-10-11. Vince reviewed the
+  shared Google Photos album and chose none; waiting for other photos. Plan: no
+  autoplay, prev/next + swipe, alt text on each, ≤300 KB, check with parents
+  before using photos of young children.
 - ✅ `giving.url` set to the sister's GoFundMe (2026-10-11). Still confirm the
   purposes line and the "card at the viewing" line with the family
 - Rosary time (9:00 vs 9:15) and placement of Words of Remembrance confirmed
