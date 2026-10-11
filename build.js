@@ -22,7 +22,8 @@ const longDate = date => new Date(date + 'T12:00:00Z').toLocaleDateString('en-US
 const clock = time => { const [h, m] = time.split(':').map(Number); return `${(h % 12) || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}`; };
 // Heading line: date and time first, then the event. `end` is shown only when it is a real end time
 // (calendar-only estimates live in `calendarEnd`).
-const headingWhen = ev => `${longDate(ev.date)}, ${clock(ev.start)}${ev.end ? ' – ' + clock(ev.end) : ''}`;
+// If it has to wrap on a phone, it breaks between the date and the time, never inside either.
+const headingWhen = ev => `<span class="nw">${esc(longDate(ev.date))},</span> <span class="nw">${clock(ev.start)}${ev.end ? ' – ' + clock(ev.end) : ''}</span>`;
 
 function calendarFields(key, ev) {
   const start = ev.arrivalTime || ev.start;
@@ -88,7 +89,7 @@ function eventCard(key, ev, icsPath) {
     : '';
   const lines = [
     `      <article class="event">`,
-    `        <h3><span class="when">${esc(headingWhen(ev))}:</span> ${show(ev.title)}</h3>`,
+    `        <h3><span class="when">${headingWhen(ev)}</span> ${show(ev.title)}</h3>`,
     `        <p class="where">${where}</p>`,
     ev.warning ? `        <div class="notice"><p>${ev.arrivalTime ? `Please arrive by ${clock(ev.arrivalTime)}. ` : ''}${show(ev.warning)}</p></div>` : '',
     isTBD(ev.notes) ? '' : `        <p>${esc(ev.notes)}</p>`,
@@ -96,8 +97,8 @@ function eventCard(key, ev, icsPath) {
     isTBD(ev.reception) ? '' : `        <p>Reception: ${esc(ev.reception)}</p>`,
     `        <div class="links">`,
     isTBD(ev.mapUrl) ? '' : `          <a class="btn" href="${esc(ev.mapUrl)}">Get directions</a>`,
-    `          <a class="btn" href="${esc(icsPath)}">Add to calendar</a>`,
-    `          <a class="btn" href="${esc(googleUrl(c))}">Google Calendar</a>`,
+    `          <a class="btn" href="${esc(icsPath)}">Add to iPhone calendar</a>`,
+    `          <a class="btn" href="${esc(googleUrl(c))}">Add to Google Calendar</a>`,
     `        </div>`,
     `      </article>`,
   ];

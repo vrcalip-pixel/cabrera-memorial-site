@@ -63,7 +63,9 @@ p{margin:0 0 1.1rem;max-width:68ch}
 .event:last-child{padding-bottom:.5rem}
 .event::before{content:"";position:absolute;left:-.55rem;top:.55rem;width:.95rem;height:.95rem;border-radius:50%;background:var(--purple);border:2px solid var(--ivory)}
 .event h3{margin-bottom:.5rem}
-.event h3 .when{font-weight:300;color:var(--lavender)}
+.event h3 .when{display:block;font-weight:300;color:var(--lavender)}
+@media (max-width:46rem){.event h3 .when{font-size:1.15rem}}
+.nw{white-space:nowrap}
 .event .where{margin:0 0 .5rem}
 .event .where a{color:var(--ivory-dim)}
 .event ul{margin:.5rem 0 1rem;padding-left:1.2rem}
