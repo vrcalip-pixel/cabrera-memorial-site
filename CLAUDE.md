@@ -105,6 +105,9 @@ phones), then About Patrick (Vince, 2026-10-11).
 - No pallbearers section. No Updates section. No portrait in About until Vince
   supplies a better one.
 - No animation beyond subtle fades. This is a memorial, not a product page.
+  One approved exception (Vince, 2026-10-11): the dove home icon flaps twice on
+  page load (under 2 s) and twice on hover/focus. Never a continuous loop (WCAG
+  2.2.2); off under prefers-reduced-motion.
 
 ## Launch checklist (block launch on items marked ⛔)
 - ✅ Viewing confirmed: Wed Oct 14, Mountain View Funeral Home, Lakewood

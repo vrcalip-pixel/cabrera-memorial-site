@@ -28,6 +28,12 @@ a:hover{text-decoration-color:var(--gold)}
 .nav li a:hover{color:var(--ivory)}
 .nav .home{display:inline-flex;align-items:center;justify-content:center;min-width:2.75rem;min-height:2.75rem;margin-left:-.6rem;color:var(--ivory);flex:none}
 .nav .home:hover{opacity:.8}
+/* dove: two gentle wingbeats on load, two more on hover/focus; none with reduced motion */
+.nav .home .wing{transform-box:fill-box;transform-origin:30% 100%;animation:flap .6s ease-in-out .5s 2}
+.nav .home:hover .wing,.nav .home:focus-visible .wing{animation:flap-again .6s ease-in-out 2}
+@keyframes flap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.3)}}
+@keyframes flap-again{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.3)}}
+@media (prefers-reduced-motion:reduce){.nav .home .wing{animation:none!important}}
 @media (max-width:46rem){html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 6.75rem)}.nav .wrap{flex-wrap:nowrap;align-items:flex-start;gap:.75rem;padding-top:.6rem;padding-bottom:.6rem}.nav ul{flex:1;min-width:0;flex-wrap:wrap;overflow:visible;gap:.35rem 1.1rem}.nav li a{display:inline-block;padding:.35rem 0}}
 
 /* hero */
