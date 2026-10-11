@@ -157,11 +157,14 @@
     "acknowledgments": "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. Special thanks to Father Tuan, Father Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home."
   },
   "giving": {
-    "show": false,
-    "headline": "In lieu of flowers",
-    "text": "TBD — the family asks that gifts be directed to [parish / charity / fund].",
+    "show": true,
+    "headline": "Ways to help the family",
+    "text": "Many of you have asked how you can help. Gifts will go toward meals, travel for family coming from Guam, and the costs of these days.",
     "url": "TBD",
-    "buttonLabel": "Give in Patrick's name"
+    "buttonLabel": "Give through GoFundMe",
+    "inPerson": "If you'd rather bring a card to the viewing or the Mass, there will be a place for it there.",
+    "closing": "Si Yu'os ma'åse'.",
+    "_note": "Draft wording shown as a placeholder at Vince’s request (2026-10-11). Confirm the purposes and the card line with the family; paste the GoFundMe link into url."
   },
   "memories": {
     "show": true,
