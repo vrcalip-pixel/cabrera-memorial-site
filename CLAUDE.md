@@ -26,7 +26,7 @@ family; Vince is the editor of record.
   parking, or family names. Leave them TBD and list them in the launch checklist.
 - **No pallbearers section.** There are none. The casket is delivered to the
   church the morning of the Mass by Mountain View transport.
-- **Catholic Mass of Christian Burial terminology.** Use the order of service in
+- **Catholic Mass of Christian Burial terminology.** The event is called "Funeral Mass" (what the family calls it); "Mass of Christian Burial" appears once, as the formal name heading the program. Never "Mass of Catholic Burial" (Vince, 2026-10-11). Use the order of service in
   data.json verbatim. Do not substitute generic "Words of Welcome / Benediction"
   structure.
 - **Tone:** warm, plain, dignified. Short sentences. No stock funeral phrases
