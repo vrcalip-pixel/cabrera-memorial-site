@@ -26,7 +26,9 @@ a:hover{text-decoration-color:var(--gold)}
 .nav ul::-webkit-scrollbar{display:none}
 .nav li a{text-decoration:none;font-size:.95rem;white-space:nowrap;color:var(--ivory-dim)}
 .nav li a:hover{color:var(--ivory)}
-@media (max-width:46rem){html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 8.5rem)}.nav .wrap{flex-wrap:wrap;gap:.25rem 1rem;padding-top:.6rem;padding-bottom:.6rem}.nav .brand{flex-basis:100%}.nav ul{flex-wrap:wrap;overflow:visible;gap:.35rem 1.1rem}.nav li a{display:inline-block;padding:.35rem 0}}
+.nav .home{display:inline-flex;align-items:center;justify-content:center;min-width:2.75rem;min-height:2.75rem;margin-left:-.6rem;color:var(--ivory);flex:none}
+.nav .home:hover{opacity:.8}
+@media (max-width:46rem){html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 6.75rem)}.nav .wrap{flex-wrap:nowrap;align-items:flex-start;gap:.75rem;padding-top:.6rem;padding-bottom:.6rem}.nav ul{flex:1;min-width:0;flex-wrap:wrap;overflow:visible;gap:.35rem 1.1rem}.nav li a{display:inline-block;padding:.35rem 0}}
 
 /* hero */
 .hero{padding:0 0 3.5rem}
@@ -35,7 +37,7 @@ a:hover{text-decoration-color:var(--gold)}
 .slide img{width:100%;height:100%;object-fit:contain;display:block}
 .slides::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;pointer-events:none;background:linear-gradient(to bottom,rgba(78,41,81,0),var(--purple))}
 .hero .wrap{margin-top:-3.25rem;position:relative}
-.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(2.75rem,8vw,5.5rem);line-height:.98;margin:0 0 .6rem;letter-spacing:-.01em;font-variation-settings:"opsz" 144}
+.hero h1{font-family:var(--display);font-weight:300;font-size:min(5.5rem,calc((100vw - 2.5rem) / 8.2));white-space:nowrap;line-height:.98;margin:0 0 .6rem;letter-spacing:-.01em;font-variation-settings:"opsz" 144}
 .hero .dates{font-family:var(--display);font-weight:300;font-size:clamp(1.2rem,2.6vw,1.55rem);color:var(--lavender);margin:0 0 1.4rem}
 .hero .lede{font-size:1.25rem;max-width:40ch;margin:0 0 1.75rem;font-style:italic;color:var(--ivory-dim)}
 .hero .quick{display:flex;flex-wrap:wrap;gap:.6rem}
@@ -45,7 +47,7 @@ a:hover{text-decoration-color:var(--gold)}
 .btn.gold:hover{background:#ffd666}
 @media (max-width:46rem){.hero .wrap{margin-top:-1.5rem}}
 /* desktop: two equal columns, text left and photo right, no fades */
-@media (min-width:60rem){.hero{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;width:min(100% - 2.5rem, 64rem);margin-inline:auto;padding:4rem 0}.hero .wrap{grid-column:1;grid-row:1;width:auto;margin:0}.slides{grid-column:2;grid-row:1;border-radius:.5rem}.slides::after{display:none}.hero h1{font-size:clamp(3rem,4.6vw,4.25rem)}}
+@media (min-width:60rem){.hero{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;width:min(100% - 2.5rem, 64rem);margin-inline:auto;padding:4rem 0}.hero .wrap{grid-column:1;grid-row:1;width:auto;margin:0}.slides{grid-column:2;grid-row:1;border-radius:.5rem}.slides::after{display:none}.hero h1{font-size:min(4.6vw,3.6rem)}}
 
 /* sections */
 section{padding:3.5rem 0;border-top:1px solid rgba(246,241,231,.14)}

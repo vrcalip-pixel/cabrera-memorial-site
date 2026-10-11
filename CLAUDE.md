@@ -14,7 +14,7 @@ The site exists to do four things, in this order:
 3. Tell people who Patrick was — a whole person, not just "Army + Vikings."
 4. Collect: memorial gifts, shared memories/condolences.
 
-Owner: Vince Cabrera (site builder, eulogist). Content decisions come from the
+Owner: Vince Calip (site builder, eulogist). Content decisions come from the
 family; Vince is the editor of record.
 
 ## Hard rules
@@ -71,7 +71,7 @@ First task when you open this repo:
   fonts beyond Google Fonts (headline serif — see Design).
 
 ## Pages / sections (single page with anchors is acceptable; keep nav sticky)
-Order on the page: Services and Program side by side on desktop (stacked on
+Order on the page: Services and Funeral Mass Program side by side on desktop (stacked on
 phones), then About Patrick (Vince, 2026-10-11).
 1. **Home / hero** — portrait, full name, dates, one-line epitaph from
    data.json, three event cards (date · time · venue · "Get directions" ·
@@ -81,7 +81,7 @@ phones), then About Patrick (Vince, 2026-10-11).
    military honors at the cemetery). Pull all copy from data.json.
 3. **About Patrick** — `content/bio.md` rendered, then photo gallery
    (lightbox optional, not required).
-4. **Program** — digital version of the printed program: order of service,
+4. **Funeral Mass Program** — digital version of the printed program: order of service,
    readings, celebrants, acknowledgments. Printable with `@media print`.
 5. **Share a Memory** — short form: name, relationship, memory (textarea),
    optional photo upload if Netlify Forms allows; otherwise text only.
