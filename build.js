@@ -17,13 +17,21 @@ const slug = key => key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 // "2026-10-20" + "09:00" -> "20261020T090000" (local time in TZ)
 const stamp = (date, time) => date.replace(/-/g, '') + 'T' + time.replace(':', '') + '00';
 
+// "2026-10-14" -> "October 14, 2026"; "16:00" -> "4:00 PM"
+const longDate = date => new Date(date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const clock = time => { const [h, m] = time.split(':').map(Number); return `${(h % 12) || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}`; };
+// Heading line: date and time first, then the event. `end` is shown only when it is a real end time
+// (calendar-only estimates live in `calendarEnd`).
+const headingWhen = ev => `${longDate(ev.date)}, ${clock(ev.start)}${ev.end ? ' – ' + clock(ev.end) : ''}`;
+
 function calendarFields(key, ev) {
   const start = ev.arrivalTime || ev.start;
-  if (!ev.date || !start || !ev.end) throw new Error(`events.${key} needs date, start/arrivalTime and end for the calendar`);
+  const end = ev.end || ev.calendarEnd;
+  if (!ev.date || !start || !end) throw new Error(`events.${key} needs date, start/arrivalTime and end for the calendar`);
   return {
     title: `${ev.title} · ${data.person.displayName}`,
     start: stamp(ev.date, start),
-    end: stamp(ev.date, ev.end),
+    end: stamp(ev.date, end),
     location: [ev.venueName, isTBD(ev.address) ? ev.city : ev.address].filter(v => !isTBD(v)).join(', '),
     details: [ev.timeDisplay, ev.notes, ev.warning].filter(v => !isTBD(v)).join('\n\n'),
   };
@@ -80,10 +88,9 @@ function eventCard(key, ev, icsPath) {
     : '';
   const lines = [
     `      <article class="event">`,
-    `        <h3>${show(ev.title)}</h3>`,
-    `        <p class="when">${show(ev.dateDisplay)} · ${show(ev.timeDisplay)}</p>`,
+    `        <h3><span class="when">${esc(headingWhen(ev))}:</span> ${show(ev.title)}</h3>`,
     `        <p class="where">${where}</p>`,
-    ev.warning ? `        <div class="notice"><p>${show(ev.warning)}</p></div>` : '',
+    ev.warning ? `        <div class="notice"><p>${ev.arrivalTime ? `Please arrive by ${clock(ev.arrivalTime)}. ` : ''}${show(ev.warning)}</p></div>` : '',
     isTBD(ev.notes) ? '' : `        <p>${esc(ev.notes)}</p>`,
     expect ? expect.slice(1) : '',
     isTBD(ev.reception) ? '' : `        <p>Reception: ${esc(ev.reception)}</p>`,
