@@ -1,6 +1,5 @@
 {
   "_readme": "Single source of truth for the site. Values beginning with 'TBD' render as placeholders. Never invent values to replace a TBD.",
-
   "person": {
     "fullName": "Patrick Reyes Cabrera",
     "displayName": "Patrick Cabrera",
@@ -23,25 +22,24 @@
     "grandchildren": "TBD — full names",
     "survivingSiblings": "TBD — confirm which of: Frankie, Terry, Marlon, Marie, Martha, Tony, Art, Joey",
     "precededInDeathBy": "TBD — parents plus deceased siblings by name",
-    "parishOfOrigin": "Assumption of Our Lady Catholic Church, Piti, Guam (verify with Uncle Joey; parish founded 1955)",
+    "parishOfOrigin": "Assumption of Our Lady Catholic Church, Piti, Guam (parish founded 1955; confirm wording with Uncle Joey)",
     "service": {
       "army": "United States Army, September 1975 – August 1995 (20 years). Infantry; drill sergeant from 1988. Stations: Germany; Fort Sill, Oklahoma (1988–1991); Washington (1992); Guam (1994–1995); retired in Washington.",
       "usps": "United States Postal Service, 1997 – 2014 (17 years)."
     }
   },
-
   "events": {
     "viewing": {
       "title": "Viewing & Rosary",
-      "date": "TBD",
-      "dateDisplay": "TBD",
+      "date": "2026-10-14",
+      "dateDisplay": "Wednesday, October 14, 2026",
       "start": "10:00",
       "end": "16:00",
       "timeDisplay": "10:00 AM – 4:00 PM · Rosary at 1:00 PM",
-      "venueName": "TBD — believed to be Mountain View Funeral Home, Lakewood, WA",
-      "address": "TBD",
-      "mapUrl": "TBD",
-      "notes": "Rosary at 1:00 PM led by the family. Open to all."
+      "venueName": "Mountain View Funeral Home",
+      "address": "4100 Steilacoom Blvd SW, Lakewood, WA 98499",
+      "mapUrl": "https://maps.google.com/?q=4100+Steilacoom+Blvd+SW,+Lakewood,+WA+98499",
+      "notes": "Come any time during the viewing. The family prays the Rosary together at 1:00 PM."
     },
     "funeralMass": {
       "title": "Funeral Mass — Mass of Christian Burial",
@@ -82,7 +80,6 @@
       "notes": "Military honors will be rendered."
     }
   },
-
   "program": {
     "coverTitle": "In Loving Memory",
     "scriptures": [
@@ -90,26 +87,70 @@
       "John 14:1–3"
     ],
     "orderOfService": [
-      { "item": "Reception of the Body", "detail": "" },
-      { "item": "Holy Rosary", "detail": "Led by the family" },
-      { "item": "Opening Hymn", "detail": "TBD" },
-      { "item": "Introductory Rites", "detail": "" },
-      { "item": "First Reading", "detail": "TBD — reading and reader" },
-      { "item": "Responsorial Psalm", "detail": "TBD" },
-      { "item": "Second Reading", "detail": "TBD — reading and reader" },
-      { "item": "Gospel", "detail": "TBD" },
-      { "item": "Homily", "detail": "Rev. Tuan" },
-      { "item": "Prayers of the Faithful", "detail": "" },
-      { "item": "Liturgy of the Eucharist", "detail": "" },
-      { "item": "Communion", "detail": "TBD — hymn" },
-      { "item": "Words of Remembrance", "detail": "Vincent Cabrera, followed by family and friends — placement to be confirmed with Father Tuan" },
-      { "item": "Final Commendation", "detail": "" },
-      { "item": "Closing Hymn", "detail": "TBD" }
+      {
+        "item": "Reception of the Body",
+        "detail": ""
+      },
+      {
+        "item": "Holy Rosary",
+        "detail": "Led by the family"
+      },
+      {
+        "item": "Opening Hymn",
+        "detail": "TBD"
+      },
+      {
+        "item": "Introductory Rites",
+        "detail": ""
+      },
+      {
+        "item": "First Reading",
+        "detail": "TBD — reading and reader"
+      },
+      {
+        "item": "Responsorial Psalm",
+        "detail": "TBD"
+      },
+      {
+        "item": "Second Reading",
+        "detail": "TBD — reading and reader"
+      },
+      {
+        "item": "Gospel",
+        "detail": "TBD"
+      },
+      {
+        "item": "Homily",
+        "detail": "Rev. Tuan"
+      },
+      {
+        "item": "Prayers of the Faithful",
+        "detail": ""
+      },
+      {
+        "item": "Liturgy of the Eucharist",
+        "detail": ""
+      },
+      {
+        "item": "Communion",
+        "detail": "TBD — hymn"
+      },
+      {
+        "item": "Words of Remembrance",
+        "detail": "Vincent Cabrera, followed by family and friends — placement to be confirmed with Father Tuan"
+      },
+      {
+        "item": "Final Commendation",
+        "detail": ""
+      },
+      {
+        "item": "Closing Hymn",
+        "detail": "TBD"
+      }
     ],
     "pallbearers": null,
     "acknowledgments": "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. Special thanks to Father Tuan, Father Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home."
   },
-
   "giving": {
     "show": false,
     "headline": "In lieu of flowers",
@@ -117,33 +158,71 @@
     "url": "TBD",
     "buttonLabel": "Give in Patrick's name"
   },
-
   "memories": {
     "show": true,
     "headline": "Share a memory of Patrick",
     "intro": "A story, a photo, a few words — anything you remember. The family will read every one.",
-    "deliverTo": "TBD — Vince's email"
+    "deliverTo": "vrcalip@gmail.com"
   },
-
   "family": {
     "show": false,
     "note": "Unlisted logistics page. Populate from the group text if the family wants it; otherwise leave show=false.",
     "arrivals": [
-      { "who": "Uncle Joey, Auntie Doreen, Devin", "when": "Already in Washington" },
-      { "who": "Vanessa (Auntie Martha's daughter)", "when": "Already in Washington" },
-      { "who": "Mark", "when": "Monday, October 12" },
-      { "who": "Auntie Beti and Isaac", "when": "Saturday, October 17" },
-      { "who": "Auntie Martha", "when": "Viewing and Funeral Mass only — returns home before the burial" }
+      {
+        "who": "Uncle Joey, Auntie Doreen, Devin",
+        "when": "Already in Washington"
+      },
+      {
+        "who": "Vanessa (Auntie Martha's daughter)",
+        "when": "Already in Washington"
+      },
+      {
+        "who": "Mark",
+        "when": "Monday, October 12"
+      },
+      {
+        "who": "Auntie Beti and Isaac",
+        "when": "Saturday, October 17"
+      },
+      {
+        "who": "Auntie Martha",
+        "when": "Viewing and Funeral Mass only — returns home before the burial"
+      }
     ]
   },
-
   "site": {
     "title": "Patrick Cabrera · 1955–2026",
     "domain": "TBD",
     "ogImage": "/photos/portrait.jpg",
     "editor": "Vince Cabrera",
-    "updates": [
-      { "date": "2026-10-11", "note": "Site created. Viewing and burial venues pending confirmation." }
+    "updates": [],
+    "design": {
+      "base": "#4E2951",
+      "deep": "#3B1E3D",
+      "ink": "#2A1429",
+      "ivory": "#F6F1E7",
+      "ivoryDim": "#E3D8E2",
+      "lavender": "#CDB4CF",
+      "gold": "#FFC62F",
+      "note": "Base plum sampled from Patrick's shirt in the family photo. Gold used only for the primary button and the burial warning.",
+      "displayFont": "Fraunces",
+      "bodyFont": "Lora"
+    },
+    "hero": {
+      "type": "single photo, full width, uncropped 3:2",
+      "futureCarousel": true,
+      "photo": "family photo from Maddie (960x640, want higher-res)"
+    },
+    "sections": [
+      "Services",
+      "About Patrick",
+      "Program",
+      "Share a memory"
+    ],
+    "removed": [
+      "Updates section",
+      "Pallbearers",
+      "Portrait in About (awaiting better photo)"
     ]
   }
 }

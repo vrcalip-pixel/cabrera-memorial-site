@@ -40,13 +40,30 @@ family; Vince is the editor of record.
   states, no text in images, reduced-motion respected. Older relatives are the
   audience; default body text ≥ 18px on mobile.
 
+## Current state (read this first)
+A working first draft already exists: `index.html` at the repo root, built as a
+single self-contained file (inline CSS, inline JS, two base64-embedded photos).
+It is live for the family to review. Do NOT rebuild it from scratch or migrate
+it to a framework unless Vince asks. Your job is to make it easy to edit and
+deploy, then apply updates as they come in.
+
+First task when you open this repo:
+1. Move the two embedded base64 images out of `index.html` into
+   `/photos/family.jpg` and `/photos/portrait.jpg` and reference them by path.
+2. Move the inline `<style>` into `/styles.css`. Keep the HTML otherwise intact.
+3. Make `data.json` the source of truth: either a tiny build script
+   (`node build.js` renders `index.html` from `template.html` + `data.json`), or
+   clearly commented HTML blocks that map 1:1 to data.json keys. Vince's
+   preference is the build script — he wants to change a date in one place.
+4. Add a `netlify.toml` and deploy. Confirm the live URL works on a phone.
+
 ## Stack (keep it simple)
-- **Astro** + **Tailwind** static site. `data.json` and `content/*.md` are read
-  at build time. No CMS, no database, no auth.
+- **Plain static HTML/CSS/JS.** No framework. `data.json` and `content/*.md`
+  feed a small Node build script. No CMS, no database, no auth.
 - Deploy to **Netlify** (preferred — drag-and-drop or Git deploy, free, custom
   domain in minutes). GitHub Pages is the fallback.
-- Forms (Share a Memory) via **Netlify Forms** or an embedded Google Form —
-  whichever is faster. Submissions go to Vince's email.
+- Share a Memory currently opens a `mailto:` to Vince. Upgrade to **Netlify
+  Forms** once deployed so it works without a mail app.
 - Donations: a single outbound link from `data.json.giving.url`. Do not build
   payment handling.
 - Photos: `/public/photos/`. Optimize to ≤ 300 KB each; use Astro `<Image>`.
@@ -70,23 +87,26 @@ family; Vince is the editor of record.
    entirely while `giving.url` is TBD.
 7. **Family** (`/family`, unlisted, no password) — arrivals, who's staying
    where, contact for logistics. Only build if `family.show` is true.
-8. **Updates** — a short dated changelog at the bottom of Services so people
-   who already saved a screenshot know what changed.
+8. ~~Updates~~ — removed at Vince's request. Don't add it back.
 
-## Design
-- Match the Canva flyer the family already circulated: deep teal/navy
-  background (`#1F3A48` family), warm off-white text (`#E6E6E6`), a
-  high-contrast serif for headings (Playfair Display or Bodoni Moda), a clean
-  humanist sans for body (Lato or Source Sans 3). Light-gray panel accents.
-- Respect `prefers-color-scheme`: the dark palette is the default; provide a
-  readable light fallback.
-- Portrait in an arch/rounded-top frame echoes the flyer. Reuse the same photo.
+## Design (already decided — do not change without asking)
+- Palette is in `data.json.site.design`. Base plum `#4E2951` was sampled from
+  Patrick's shirt in the hero photo; it is NOT the Canva flyer teal and NOT the
+  Vikings' official purple. Gold `#FFC62F` appears in exactly two places: the
+  primary button and the burial "arrive early" warning.
+- Type: Fraunces (display, weight 300) + Lora (body, 19px). Google Fonts.
+- Hero: the family photo, full width, uncropped at its native 3:2 ratio, with
+  the plum fading up from the bottom into the name. Built as a `.slides`
+  container with one `.slide` so a carousel can be added later.
+- No pallbearers section. No Updates section. No portrait in About until Vince
+  supplies a better one.
 - No animation beyond subtle fades. This is a memorial, not a product page.
 
 ## Launch checklist (block launch on items marked ⛔)
-- ⛔ Viewing date and venue confirmed (`events.viewing`)
+- ✅ Viewing confirmed: Wed Oct 14, Mountain View Funeral Home, Lakewood
 - ⛔ Burial venue confirmed as Tahoma National Cemetery (`events.interment`)
-- ⛔ Portrait photo in `/public/photos/portrait.jpg`
+- Higher-resolution copy of the hero family photo (current one is 960×640)
+- A better portrait for the About section
 - ⛔ `giving.url` set, or Give section hidden
 - Rosary time (9:00 vs 9:15) and placement of Words of Remembrance confirmed
   with Father Tuan (`program.*`)
