@@ -40,7 +40,7 @@ a:hover{text-decoration-color:var(--gold)}
 @keyframes flap-again{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.3)}}
 @media (prefers-reduced-motion:reduce){.nav .home .wing{animation:none!important}}
 /* menu button: phones only */
-.menu-toggle{display:none;align-items:center;gap:.45rem;background:none;border:1px solid rgba(246,241,231,.4);border-radius:999px;color:var(--ivory);font:inherit;font-size:1rem;padding:.4rem .95rem;min-height:2.75rem;cursor:pointer}
+.menu-toggle{display:none;align-items:center;justify-content:center;background:none;border:0;color:var(--ivory);padding:0;width:2.75rem;height:2.75rem;margin-right:-.6rem;cursor:pointer;border-radius:.4rem}
 .menu-toggle .x{display:none}.nav.open .menu-toggle .x{display:inline}.nav.open .menu-toggle .bars{display:none}
 @media (max-width:46rem){html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4.5rem)}.nav .wrap{flex-wrap:wrap;gap:0 1rem;min-height:3.5rem}.menu-toggle{display:inline-flex}.nav ul{flex-basis:100%;flex-direction:column;gap:0;overflow:visible;padding:0 0 .6rem}.js .nav ul{display:none}.js .nav.open ul{display:flex}.nav li a{display:block;padding:.8rem 0;font-size:1.125rem;color:var(--ivory);border-top:1px solid rgba(246,241,231,.12)}}
 
