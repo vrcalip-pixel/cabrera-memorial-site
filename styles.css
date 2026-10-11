@@ -16,7 +16,10 @@ img{max-width:100%;display:block}
 a{color:var(--ivory);text-decoration-color:var(--lavender);text-underline-offset:.18em}
 a:hover{text-decoration-color:var(--gold)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
-.wrap{width:min(100% - 2.5rem, 64rem);margin-inline:auto}
+/* page width: narrow gutters on phones; wider column with roomier gutters on desktop */
+:root{--page:min(100% - 2.5rem, 64rem)}
+@media (min-width:60rem){:root{--page:min(100% - 5rem, 80rem)}}
+.wrap{width:var(--page);margin-inline:auto}
 
 /* nav */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(78,41,81,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(246,241,231,.14)}
@@ -53,7 +56,7 @@ a:hover{text-decoration-color:var(--gold)}
 .btn.gold:hover{background:#ffd666}
 @media (max-width:46rem){.hero .wrap{margin-top:-1.5rem}}
 /* desktop: two equal columns, text left and photo right, no fades */
-@media (min-width:60rem){.hero{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;width:min(100% - 2.5rem, 64rem);margin-inline:auto;padding:4rem 0}.hero .wrap{grid-column:1;grid-row:1;width:auto;margin:0}.slides{grid-column:2;grid-row:1;border-radius:.5rem}.slides::after{display:none}.hero h1{font-size:min(4.6vw,3.6rem)}}
+@media (min-width:60rem){.hero{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;width:var(--page);margin-inline:auto;padding:4rem 0}.hero .wrap{grid-column:1;grid-row:1;width:auto;margin:0}.slides{grid-column:2;grid-row:1;border-radius:.5rem}.slides::after{display:none}.hero h1{font-size:min(4.6vw,3.6rem)}}
 
 /* sections */
 section{padding:3.5rem 0;border-top:1px solid rgba(246,241,231,.14)}
@@ -85,7 +88,7 @@ p{margin:0 0 1.1rem;max-width:68ch}
 
 /* bio */
 .bio{display:grid;gap:2rem}
-@media (min-width:56rem){.bio{grid-template-columns:1fr 17rem;gap:3.5rem}}
+@media (min-width:56rem){.bio{grid-template-columns:minmax(0,44rem) 22rem;gap:4.5rem}}
 .portrait{width:100%;border-radius:50% 50% 1.25rem 1.25rem / 42% 42% 1.25rem 1.25rem;overflow:hidden;background:var(--purple-deep)}
 .bio aside{align-self:start}
 .bio .text p:first-of-type::first-letter{font-family:var(--display);font-weight:300;font-size:3.6em;float:left;line-height:.8;padding:.08em .12em 0 0;color:var(--lavender)}
@@ -98,7 +101,7 @@ p{margin:0 0 1.1rem;max-width:68ch}
 .program{display:grid;gap:2.5rem}
 @media (min-width:56rem){.program{grid-template-columns:1fr 1fr;gap:4rem}}
 /* desktop: Services and Program side by side */
-@media (min-width:60rem){.plan{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;width:min(100% - 2.5rem, 64rem);margin-inline:auto;border-top:1px solid rgba(246,241,231,.14)}.plan > section{border-top:0}.plan .wrap{width:auto}.plan .program{grid-template-columns:1fr;gap:2.5rem}#program{background:var(--purple-deep);border-radius:.6rem;padding:2.25rem 2rem;margin:1.25rem 0 3.5rem}.plan h2{font-size:2.5rem;white-space:nowrap}}
+@media (min-width:60rem){.plan{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;width:var(--page);margin-inline:auto;border-top:1px solid rgba(246,241,231,.14)}.plan > section{border-top:0}.plan .wrap{width:auto}.plan .program{grid-template-columns:1fr;gap:2.5rem}#program{background:var(--purple-deep);border-radius:.6rem;padding:2.25rem 2rem;margin:1.25rem 0 3.5rem}.plan h2{font-size:2.5rem;white-space:nowrap}}
 .order{list-style:none;margin:0;padding:0}
 .order li{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.6rem 0;border-bottom:1px solid rgba(246,241,231,.12);align-items:baseline}
 .order li span:last-child{font-size:.95rem;color:var(--lavender);text-align:right;max-width:18rem}
@@ -113,7 +116,11 @@ button{font:inherit;cursor:pointer}
 
 /* footer */
 footer{padding:2.5rem 0 3rem;border-top:1px solid rgba(246,241,231,.14);font-size:.95rem;color:var(--lavender)}
-footer p{margin:.3rem 0}
+footer p{margin:0;max-width:none}
+.footline{display:flex;flex-wrap:wrap;justify-content:center;text-align:center;gap:.25rem 0}
+.footline span{white-space:nowrap}
+.footline span + span::before{content:"·";padding:0 .65rem;color:rgba(205,180,207,.6)}
+@media (max-width:46rem){.footline{flex-direction:column}.footline span{white-space:normal}.footline span + span::before{content:none}}
 @media print{
   body{background:#fff;color:#111;font-size:11pt}
   .nav,.hero .quick,form,#memories,footer,.event .links{display:none}
