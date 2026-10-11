@@ -95,10 +95,10 @@ First task when you open this repo:
   Vikings' official purple. Gold `#FFC62F` appears in exactly two places: the
   primary button and the burial "arrive early" warning.
 - Type: Fraunces (display, weight 300) + Lora (body, 19px). Google Fonts.
-- Hero: the family photo, uncropped at its native 3:2 ratio — full width on
-  phones, capped at 960px (its native width) and centered on desktop with the
-  side edges fading into the plum (Vince approved 2026-10-10), with
-  the plum fading up from the bottom into the name. Built as a `.slides`
+- Hero: the family photo, uncropped at its native 3:2 ratio. Phones: full width
+  with the plum fading up from the bottom into the name. Desktop (≥960px): two
+  equal columns — name, dates, epitaph and buttons on the left, photo on the
+  right, no fades or blended edges (Vince, 2026-10-11). Built as a `.slides`
   container with one `.slide` so a carousel can be added later.
 - No pallbearers section. No Updates section. No portrait in About until Vince
   supplies a better one.

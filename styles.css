@@ -34,8 +34,6 @@ a:hover{text-decoration-color:var(--gold)}
 .slide{position:absolute;inset:0}
 .slide img{width:100%;height:100%;object-fit:contain;display:block}
 .slides::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;pointer-events:none;background:linear-gradient(to bottom,rgba(78,41,81,0),var(--purple))}
-/* wider than the photo: show it at native size, centered, edges fading into the plum */
-@media (min-width:60rem){.slides{max-width:960px;margin-inline:auto;-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent)}}
 .hero .wrap{margin-top:-3.25rem;position:relative}
 .hero h1{font-family:var(--display);font-weight:300;font-size:clamp(2.75rem,8vw,5.5rem);line-height:.98;margin:0 0 .6rem;letter-spacing:-.01em;font-variation-settings:"opsz" 144}
 .hero .dates{font-family:var(--display);font-weight:300;font-size:clamp(1.2rem,2.6vw,1.55rem);color:var(--lavender);margin:0 0 1.4rem}
@@ -46,6 +44,8 @@ a:hover{text-decoration-color:var(--gold)}
 .btn.gold{background:var(--gold);color:var(--purple-ink);border-color:var(--gold);font-weight:500}
 .btn.gold:hover{background:#ffd666}
 @media (max-width:46rem){.hero .wrap{margin-top:-1.5rem}}
+/* desktop: two equal columns, text left and photo right, no fades */
+@media (min-width:60rem){.hero{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;width:min(100% - 2.5rem, 64rem);margin-inline:auto;padding:4rem 0}.hero .wrap{grid-column:1;grid-row:1;width:auto;margin:0}.slides{grid-column:2;grid-row:1;border-radius:.5rem}.slides::after{display:none}.hero h1{font-size:clamp(3rem,4.6vw,4.25rem)}}
 
 /* sections */
 section{padding:3.5rem 0;border-top:1px solid rgba(246,241,231,.14)}
