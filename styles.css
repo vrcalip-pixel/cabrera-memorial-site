@@ -33,6 +33,10 @@ a:hover{text-decoration-color:var(--gold)}
 .nav li a:hover{color:var(--ivory)}
 .nav .home{display:inline-flex;align-items:center;justify-content:center;min-width:2.75rem;min-height:2.75rem;margin-left:-.6rem;color:var(--ivory);flex:none}
 .nav .home:hover{opacity:.8}
+/* dove (home) and latte stone (About Patrick) sit together at the left */
+.nav .marks{display:flex;align-items:center;gap:.15rem;flex:none}
+.nav .latte{display:inline-flex;align-items:center;justify-content:center;min-width:2.75rem;min-height:2.75rem;color:var(--ivory)}
+.nav .latte:hover{opacity:.8}
 /* dove: two gentle wingbeats on load, two more on hover/focus; none with reduced motion */
 .nav .home .wing{transform-box:fill-box;transform-origin:30% 100%;animation:flap .6s ease-in-out .5s 2}
 .nav .home:hover .wing,.nav .home:focus-visible .wing{animation:flap-again .6s ease-in-out 2}
