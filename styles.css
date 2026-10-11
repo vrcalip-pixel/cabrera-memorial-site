@@ -63,6 +63,9 @@ a:hover{text-decoration-color:var(--gold)}
 .btn:hover{border-color:var(--gold)}
 .btn.gold{background:var(--gold);color:var(--purple-ink);border-color:var(--gold);font-weight:500}
 .btn.gold:hover{background:#ffd666}
+/* secondary call to action: gold outline, so it stands out without competing with the solid gold button */
+.btn.gold-outline{border:2px solid var(--gold);color:var(--gold);font-weight:500;padding:calc(.7rem - 1px) calc(1.1rem - 1px)}
+.btn.gold-outline:hover{background:rgba(255,198,47,.12)}
 @media (max-width:46rem){.hero .wrap{margin-top:-1.5rem}}
 /* desktop: two equal columns, text left and photo right, no fades */
 @media (min-width:60rem){.hero{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;padding:4.5rem calc((100% - var(--page)) / 2);background:radial-gradient(70% 120% at 15% 25%,var(--plum-glow) 0%,rgba(101,59,106,0) 70%),linear-gradient(135deg,var(--plum-mid) 0%,var(--purple-deep) 100%)}.hero .wrap{grid-column:1;grid-row:1;width:auto;margin:0}.slides{grid-column:2;grid-row:1;border-radius:.5rem}.slides::after{display:none}.hero h1{font-size:min(4.6vw,3.6rem)}}
