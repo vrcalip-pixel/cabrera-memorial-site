@@ -71,6 +71,8 @@ First task when you open this repo:
   fonts beyond Google Fonts (headline serif — see Design).
 
 ## Pages / sections (single page with anchors is acceptable; keep nav sticky)
+Order on the page: Services and Program side by side on desktop (stacked on
+phones), then About Patrick (Vince, 2026-10-11).
 1. **Home / hero** — portrait, full name, dates, one-line epitaph from
    data.json, three event cards (date · time · venue · "Get directions" ·
    "Add to calendar"). Burial card carries the arrive-early warning verbatim.
