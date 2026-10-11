@@ -169,8 +169,9 @@
   "memories": {
     "show": true,
     "headline": "Share a memory of Patrick",
-    "intro": "A story, a photo, a few words — anything you remember. The family will read every one.",
-    "deliverTo": "vrcalip@gmail.com"
+    "intro": "A story, a few words — anything you remember. The family will read every one.",
+    "endpoint": "https://formspree.io/f/moejwren",
+    "_note": "Delivered by Formspree to the email set in the Formspree account. No email address is stored on the site."
   },
   "family": {
     "show": false,

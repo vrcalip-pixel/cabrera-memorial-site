@@ -64,8 +64,9 @@ First task when you open this repo:
   feed a small Node build script. No CMS, no database, no auth.
 - Deploy to **Netlify** (preferred — drag-and-drop or Git deploy, free, custom
   domain in minutes). GitHub Pages is the fallback.
-- Share a Memory currently opens a `mailto:` to Vince. Upgrade to **Netlify
-  Forms** once deployed so it works without a mail app.
+- Share a Memory posts to **Formspree** (`data.json.memories.endpoint`), which
+  emails the family. Replaced the old `mailto:` on 2026-10-11; no email address
+  is stored on the site. (Netlify Forms not used: the site is on GitHub Pages.)
 - Donations: a single outbound link from `data.json.giving.url`. Do not build
   payment handling.
 - Photos: `/public/photos/`. Optimize to ≤ 300 KB each; use Astro `<Image>`.

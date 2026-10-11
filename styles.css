@@ -128,6 +128,8 @@ p{margin:0 0 1.1rem;max-width:68ch}
 
 /* form */
 form{display:grid;gap:1rem;max-width:40rem}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+button[disabled]{opacity:.7;cursor:wait}
 label{display:grid;gap:.35rem;font-size:1rem;color:var(--ivory-dim)}
 input,textarea{font:inherit;font-size:1.05rem;padding:.7rem .85rem;border-radius:.5rem;border:1px solid rgba(246,241,231,.3);background:var(--purple-deep);color:var(--ivory)}
 textarea{min-height:9rem;resize:vertical}

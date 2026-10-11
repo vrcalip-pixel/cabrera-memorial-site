@@ -126,14 +126,16 @@
 
 <section id="memories">
   <div class="wrap">
-    <h2>Share a memory of Patrick</h2>
-    <p>A story, a photo, a few words — anything you remember. The family will read every one, and some may be shared at the Mass.</p>
-    <form id="memoryForm">
+    <h2>{{memories.headline}}</h2>
+    <p>{{memories.intro}}</p>
+    <form id="memoryForm" action="{{memories.endpoint}}" method="POST">
+      <input type="hidden" name="_subject" value="A memory of Patrick">
+      <p class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
       <label>Your name<input name="name" required autocomplete="name"></label>
       <label>How you knew Patrick<input name="relationship" placeholder="cousin, neighbor, Fort Sill, the post office…"></label>
       <label>Your memory<textarea name="memory" required></textarea></label>
       <div><button class="btn gold" type="submit">Send to the family</button></div>
-      <p class="small muted" id="formNote">This opens your email app with the message ready to send. Photos can be attached there.</p>
+      <p class="small muted" id="formNote" role="status" aria-live="polite">Your memory goes straight to the family.</p>
     </form>
   </div>
 </section>
@@ -157,12 +159,17 @@
 })();
 (function(){
   var f=document.getElementById('memoryForm');
+  // Sends to Formspree without leaving the page; without JavaScript the form still posts normally.
+  var note=document.getElementById('formNote'), btn=f.querySelector('button[type=submit]');
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var d=new FormData(f);
-    var subj='A memory of Patrick from '+(d.get('name')||'');
-    var body='From: '+d.get('name')+'\nRelationship: '+(d.get('relationship')||'')+'\n\n'+d.get('memory');
-    window.location.href='mailto:vrcalip@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    d.set('_subject','A memory of Patrick from '+(d.get('name')||'a friend'));
+    btn.disabled=true; note.textContent='Sending…';
+    fetch(f.action,{method:'POST',body:d,headers:{Accept:'application/json'}})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); f.reset(); note.textContent='Thank you. Your memory was sent to the family.'; })
+      .catch(function(){ note.textContent='Sorry, that didn\'t go through. Please check your connection and try again.'; })
+      .then(function(){ btn.disabled=false; });
   });
 })();
 </script>
