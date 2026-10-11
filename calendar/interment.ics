@@ -22,14 +22,18 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:interment@cabrera-memorial
-DTSTAMP:20261011T190644Z
+DTSTAMP:20261011T234121Z
 DTSTART;TZID=America/Los_Angeles:20261023T093000
 DTEND;TZID=America/Los_Angeles:20261023T110000
 SUMMARY:Interment with Military Honors · Patrick Cabrera
 LOCATION:Tahoma National Cemetery\, Kent\, WA
-DESCRIPTION:10:00 AM · Please arrive by 9:30 AM\n\nMilitary honors will be
-  rendered.\n\nThe cemetery runs on a strict military schedule and cannot h
- old a service for late arrivals. It is a Friday morning — allow extra ti
- me for traffic and construction\, and plan to leave early.
+DESCRIPTION:10:00 AM · Please arrive by 9:30 AM\n\nInterment means burial.
+  Because Patrick served twenty years in the U.S. Army\, he will be laid to
+  rest with military honors — a short ceremony by uniformed service membe
+ rs that usually includes the playing of Taps and the folding of the Americ
+ an flag\, which is presented to the family.\n\nThe cemetery runs on a stri
+ ct military schedule and cannot hold a service for late arrivals. It is a 
+ Friday morning — allow extra time for traffic and construction\, and pla
+ n to leave early.
 END:VEVENT
 END:VCALENDAR
