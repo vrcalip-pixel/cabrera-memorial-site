@@ -201,9 +201,14 @@
       "ivoryDim": "#E3D8E2",
       "lavender": "#CDB4CF",
       "gold": "#FFC62F",
+      "plumLight": "#603866",
+      "plumGlow": "#653B6A",
+      "plumMid": "#57305B",
+      "plumLow": "#47244A",
       "note": "Base plum sampled from Patrick's shirt in the family photo. Gold used only for the primary button and the burial warning.",
       "displayFont": "Fraunces",
-      "bodyFont": "Lora"
+      "bodyFont": "Lora",
+      "sections": "Hero: soft plum glow (desktop) / plum fading to deep (phone). Services+Program: plum. About: lighter plum. Share a memory: plum. Footer: deep plum. Tints chosen so lavender text stays at or above 4.5:1."
     },
     "hero": {
       "type": "single photo, full width, uncropped 3:2",
