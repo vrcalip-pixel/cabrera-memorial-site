@@ -108,6 +108,9 @@ phones), then About Patrick (Vince, 2026-10-11).
   container with one `.slide` so a carousel can be added later.
 - No pallbearers section. No Updates section. No portrait in About until Vince
   supplies a better one.
+- Do not use the Seal of Guam or the Guam flag (it contains the seal): use
+  requires a permit under 1 GCA § 414. Vince decided against it (2026-10-11).
+  The latte stone icon is the Guam/CHamoru symbol in the header.
 - No animation beyond subtle fades. This is a memorial, not a product page.
   One approved exception (Vince, 2026-10-11): the dove home icon flaps twice on
   page load (under 2 s) and twice on hover/focus. Never a continuous loop (WCAG
