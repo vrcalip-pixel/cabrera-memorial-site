@@ -60,9 +60,10 @@
       "whatToExpect": [
         "9:00 AM — the family prays the Rosary together.",
         "The casket is open for family to pay their respects until Mass begins.",
-        "10:00 AM — Mass begins promptly."
+        "10:00 AM — Vincent Calip shares words of remembrance. Father then blesses the casket, and the procession to the altar begins the Mass.",
+        "After Communion, family members may share a few words when Father invites them."
       ],
-      "reception": "TBD — none confirmed. If a repast follows, add location and time here.",
+      "reception": "A reception follows in the church hall. Father will announce it at the end of Mass.",
       "notes": "Please arrive by 9:30 AM so you are seated before Mass begins."
     },
     "interment": {
@@ -85,78 +86,125 @@
     "coverTitle": "In Loving Memory",
     "scriptures": [
       {
-        "ref": "1 Thessalonians 4:13–14",
-        "url": "https://bible.usccb.org/bible/1thessalonians/4",
-        "summary": "Saint Paul writes to people mourning someone they love: we grieve, but not without hope, because those who have died in Jesus will rise with him."
+        "label": "First Reading",
+        "ref": "Wisdom 3:1–9",
+        "url": "https://bible.usccb.org/bible/wisdom/3",
+        "summary": "The faithful who have died rest safely in God’s hands. To the world they seemed to leave us, but they are at peace."
       },
       {
-        "ref": "John 14:1–3",
-        "url": "https://bible.usccb.org/bible/john/14",
-        "summary": "Jesus tells his friends not to be troubled. There are many rooms in his Father’s house, and he has gone ahead to prepare a place for them."
+        "label": "Responsorial Psalm",
+        "ref": "Psalm 23 · The Lord Is My Shepherd",
+        "url": "https://bible.usccb.org/bible/psalms/23",
+        "summary": "God leads us like a shepherd, beside still waters and through the darkest valley, and brings us home to his house."
+      },
+      {
+        "label": "Second Reading",
+        "ref": "Romans 6:3–4, 8–9",
+        "url": "https://bible.usccb.org/bible/romans/6",
+        "summary": "Saint Paul writes that in baptism we share in Christ’s death, so that we may also share in his new life. Death no longer has power over him."
+      },
+      {
+        "label": "Gospel",
+        "ref": "TBD — Gospel passage not yet confirmed"
       }
     ],
     "orderOfService": [
       {
+        "section": "Before Mass · 9:00 AM",
         "item": "Holy Rosary",
-        "detail": "Led by the family · 9:00 AM"
+        "detail": "Led by the family"
       },
       {
+        "section": "Before Mass · 9:00 AM",
         "item": "Family Time with Patrick",
         "detail": "Until Mass begins"
       },
       {
-        "item": "Opening Hymn",
-        "detail": "TBD"
+        "section": "Opening Rites · 10:00 AM",
+        "item": "Words of Remembrance",
+        "detail": "Vincent Calip"
       },
       {
-        "item": "Greeting and Placing of the Pall",
-        "detail": ""
+        "section": "Opening Rites · 10:00 AM",
+        "item": "Blessing of the Casket and Placing of the Pall",
+        "detail": "Fr. Tuan"
       },
       {
+        "section": "Opening Rites · 10:00 AM",
+        "item": "Opening Hymn and Procession",
+        "detail": "Sung by Joe and Kyle · hymn TBD"
+      },
+      {
+        "section": "Opening Rites · 10:00 AM",
+        "item": "Opening Prayer",
+        "detail": "Chosen by Mary"
+      },
+      {
+        "section": "Liturgy of the Word",
         "item": "First Reading",
-        "detail": "1 Thessalonians 4:13–14 · reader TBD"
+        "detail": "Wisdom 3:1–9 · reader TBD"
       },
       {
+        "section": "Liturgy of the Word",
         "item": "Responsorial Psalm",
-        "detail": "TBD"
+        "detail": "The Lord Is My Shepherd · sung by Joe and Kyle"
       },
       {
+        "section": "Liturgy of the Word",
         "item": "Second Reading",
-        "detail": "TBD — reading and reader"
+        "detail": "Romans 6:3–4, 8–9 · reader TBD"
       },
       {
+        "section": "Liturgy of the Word",
+        "item": "Gospel Acclamation",
+        "detail": "Sung · TBD"
+      },
+      {
+        "section": "Liturgy of the Word",
         "item": "Gospel",
-        "detail": "John 14:1–3"
+        "detail": "Fr. Tuan · reading TBD"
       },
       {
+        "section": "Liturgy of the Word",
         "item": "Homily",
         "detail": "Fr. Tuan"
       },
       {
+        "section": "Liturgy of the Word",
         "item": "Prayers of the Faithful",
-        "detail": "TBD — reader"
+        "detail": "Chosen by Mary"
       },
       {
+        "section": "Liturgy of the Eucharist",
         "item": "Holy Communion",
-        "detail": "TBD — hymn"
+        "detail": "Hymn TBD"
       },
       {
-        "item": "Words of Remembrance",
-        "detail": "Vincent Calip, then family and friends"
+        "section": "Liturgy of the Eucharist",
+        "item": "Words from the Family",
+        "detail": "As Fr. Tuan invites"
       },
       {
-        "item": "Final Commendation",
+        "section": "Final Commendation",
+        "item": "Incensing of the Casket",
         "detail": "Fr. Tuan"
       },
       {
-        "item": "Closing Hymn",
-        "detail": "TBD"
+        "section": "Final Commendation",
+        "item": "Song of Farewell",
+        "detail": "Sung by the choir"
+      },
+      {
+        "section": "Final Commendation",
+        "item": "Final Procession",
+        "detail": ""
       }
     ],
     "pallbearers": null,
     "acknowledgments": "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. Special thanks to Father Tuan, Father Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home.",
     "acknowledgmentsSignoff": "Mary, Gina, Bella, Vincent, Isaac, Roxy, Monique, and the Cabrera family",
-    "_source": "Matches Vince’s PDF draft (program/patrick-cabrera-funeral-mass-program.pdf), 2026-10-12."
+    "_source": "Order of service from Darlene, St. John of the Woods Lazarus Ministry (call with Vince, 2026-10-12). Fr. Tuan may adjust timing on the day.",
+    "music": "Hymns chosen and sung by Joe and Kyle — titles TBD. Responsorial Psalm: The Lord Is My Shepherd (Psalm 23)."
   },
   "giving": {
     "show": true,

@@ -55,6 +55,15 @@ a{color:inherit}
 .rows li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.16rem 0;border-bottom:1px solid rgba(184,149,90,.35)}
 .rows li span:last-child{font-style:italic;text-align:right;color:var(--paper-muted);font-size:9.5pt}
 .reading{margin:0 0 1rem}
+/* the Order of Service has the most lines: a slightly tighter setting so it stays on one page */
+.paper.dense{font-size:9.5pt;padding-top:.5in}
+.dense .rows li{padding:.1rem 0}
+.dense .rows li span:last-child{font-size:9pt}
+.paper.dense h3{margin:.6rem 0 .2rem}
+.dense .divider{margin:.45rem auto}
+.dense .sub{font-size:10.5pt}
+.paper .after{margin:.7rem 0 0;text-align:center;font-style:italic;color:var(--paper-plum);font-size:9.5pt}
+.reading .ref a{color:inherit}
 .reading .ref{font-style:italic;color:var(--paper-plum);margin:0 0 .3rem}
 .paper a{text-decoration:none}
 

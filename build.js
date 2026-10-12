@@ -34,7 +34,7 @@ function calendarFields(key, ev) {
     start: stamp(ev.date, start),
     end: stamp(ev.date, end),
     location: [ev.venueName, isTBD(ev.address) ? ev.city : ev.address].filter(v => !isTBD(v)).join(', '),
-    details: [ev.timeDisplay, ev.notes, ev.warning].filter(v => !isTBD(v)).join('\n\n'),
+    details: [ev.timeDisplay, ev.notes, ev.warning, ev.reception].filter(v => !isTBD(v)).join('\n\n'),
   };
 }
 
@@ -94,7 +94,7 @@ function eventCard(key, ev, icsPath) {
     ev.warning ? `        <div class="notice"><p>${ev.arrivalTime ? `Please arrive by ${clock(ev.arrivalTime)}. ` : ''}${show(ev.warning)}</p></div>` : '',
     isTBD(ev.notes) ? '' : `        <p>${esc(ev.notes)}</p>`,
     expect ? expect.slice(1) : '',
-    isTBD(ev.reception) ? '' : `        <p>Reception: ${esc(ev.reception)}</p>`,
+    isTBD(ev.reception) ? '' : `        <p>${esc(ev.reception)}</p>`,
     `        <div class="links">`,
     isTBD(ev.mapUrl) ? '' : `          <a class="btn" href="${esc(ev.mapUrl)}">Get directions</a>`,
     `          <a class="btn" href="${esc(icsPath)}">Add to iPhone calendar</a>`,

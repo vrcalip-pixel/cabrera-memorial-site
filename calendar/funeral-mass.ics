@@ -22,13 +22,14 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:funeral-mass@cabrera-memorial
-DTSTAMP:20261012T080224Z
+DTSTAMP:20261012T191538Z
 DTSTART;TZID=America/Los_Angeles:20261020T090000
 DTEND;TZID=America/Los_Angeles:20261020T113000
 SUMMARY:Funeral Mass · Patrick Cabrera
 LOCATION:St. John of the Woods Catholic Church\, 9903 24th Ave E\, Tacoma\,
   WA 98445
 DESCRIPTION:Mass begins promptly at 10:00 AM · Rosary at 9:00 AM\n\nPlease
-  arrive by 9:30 AM so you are seated before Mass begins.
+  arrive by 9:30 AM so you are seated before Mass begins.\n\nA reception fo
+ llows in the church hall. Father will announce it at the end of Mass.
 END:VEVENT
 END:VCALENDAR

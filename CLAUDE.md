@@ -131,9 +131,12 @@ phones), then About Patrick (Vince, 2026-10-11).
   before using photos of young children.
 - ✅ `giving.url` set to the sister's GoFundMe (2026-10-11). Still confirm the
   purposes line and the "card at the viewing" line with the family
-- Rosary time (9:00 vs 9:15) and placement of Words of Remembrance confirmed
-  with Father Tuan (`program.*`)
-- Readers, readings, hymns filled in or section labeled "to be announced"
+- ✅ Order of service confirmed with Darlene (Lazarus Ministry), 2026-10-12: Vince's
+  words of remembrance open the service before Mass; family may speak after
+  Communion when Fr. Tuan invites; Song of Farewell; reception in the church hall.
+  Rosary time (9:00) not discussed: still to confirm.
+- Readings: ✅ Wisdom 3:1–9, Psalm 23 (The Lord Is My Shepherd), Romans 6:3–4, 8–9.
+  Still TBD: Gospel passage, readers, hymn titles (Joe and Kyle are choosing).
 - "Survived by" names in `content/bio.md`: children added 2026-10-12 (Gina, Bella,
   Vincent, Isaac, Roxy, Monique, oldest to youngest); grandchildren and siblings
   still unnamed by choice
