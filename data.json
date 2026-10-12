@@ -98,19 +98,23 @@
     "orderOfService": [
       {
         "item": "Holy Rosary",
-        "detail": "Led by the family"
+        "detail": "Led by the family · 9:00 AM"
+      },
+      {
+        "item": "Family Time with Patrick",
+        "detail": "Until Mass begins"
       },
       {
         "item": "Opening Hymn",
         "detail": "TBD"
       },
       {
-        "item": "Introductory Rites",
+        "item": "Greeting and Placing of the Pall",
         "detail": ""
       },
       {
         "item": "First Reading",
-        "detail": "TBD — reading and reader"
+        "detail": "1 Thessalonians 4:13–14 · reader TBD"
       },
       {
         "item": "Responsorial Psalm",
@@ -122,31 +126,27 @@
       },
       {
         "item": "Gospel",
-        "detail": "TBD"
+        "detail": "John 14:1–3"
       },
       {
         "item": "Homily",
-        "detail": "Rev. Tuan"
+        "detail": "Fr. Tuan"
       },
       {
         "item": "Prayers of the Faithful",
-        "detail": ""
+        "detail": "TBD — reader"
       },
       {
-        "item": "Liturgy of the Eucharist",
-        "detail": ""
-      },
-      {
-        "item": "Communion",
+        "item": "Holy Communion",
         "detail": "TBD — hymn"
       },
       {
         "item": "Words of Remembrance",
-        "detail": "Vincent Calip, followed by family and friends — placement to be confirmed with Father Tuan"
+        "detail": "Vincent Calip, then family and friends"
       },
       {
         "item": "Final Commendation",
-        "detail": ""
+        "detail": "Fr. Tuan"
       },
       {
         "item": "Closing Hymn",
@@ -154,7 +154,9 @@
       }
     ],
     "pallbearers": null,
-    "acknowledgments": "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. Special thanks to Father Tuan, Father Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home."
+    "acknowledgments": "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. Special thanks to Father Tuan, Father Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home.",
+    "acknowledgmentsSignoff": "Mary, Roxy, Monique, Vincent, and the Cabrera family",
+    "_source": "Matches Vince’s PDF draft (program/patrick-cabrera-funeral-mass-program.pdf), 2026-10-12."
   },
   "giving": {
     "show": true,
