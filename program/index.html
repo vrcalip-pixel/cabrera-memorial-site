@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="book.css?v=6">
+<link rel="stylesheet" href="book.css?v=7">
 </head>
 <body>
 <!-- Web version of the printed program (program/patrick-cabrera-funeral-mass-program.pdf).
@@ -17,7 +17,7 @@
 
 <header class="bar">
   <a class="back" href="../"><span aria-hidden="true">←</span> Home</a>
-  <a class="download" href="patrick-cabrera-funeral-mass-program.pdf" download title="PDF, about 300 KB">Download PDF</a>
+  <a class="download" id="pdf" href="patrick-cabrera-funeral-mass-program.pdf" download title="PDF, about 300 KB"><span class="lbl-desk">Download PDF</span><span class="lbl-touch">View Full Screen</span></a>
 </header>
 
 <div class="wrapbook">
@@ -131,6 +131,8 @@
   function settle(){ if(turning) return; var i=Math.round(book.scrollLeft/book.clientWidth); if(i!==cur){ show(i); history.replaceState(null,'','#page-'+(i+1)); } }
   var t; book.addEventListener('scroll',function(){ if(turning) return; clearTimeout(t); t=setTimeout(settle,150); },{passive:true});
   book.addEventListener('scrollend',settle);
+  // On phones and tablets the PDF button opens the PDF full screen instead of downloading it.
+  if(matchMedia('(hover: none) and (pointer: coarse)').matches){ var pdf=document.getElementById('pdf'); pdf.removeAttribute('download'); pdf.target='_blank'; pdf.rel='noopener'; }
   fit();
   var m=location.hash.match(/^#page-(\d+)$/); if(m){ var i=Math.max(0,Math.min(n-1,m[1]-1)); jump(leaves[i].offsetLeft); show(i); } else show(0);
   window.addEventListener('resize',function(){ fit(); jump(leaves[cur].offsetLeft); });

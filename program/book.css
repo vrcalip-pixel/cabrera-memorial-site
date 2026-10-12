@@ -21,6 +21,9 @@ a{color:inherit}
 .back{text-decoration:none;font-size:1rem;display:inline-flex;align-items:center;gap:.35rem;min-height:2.75rem}
 .download{display:inline-flex;align-items:center;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;padding:.5rem 1rem;border-radius:999px;min-height:2.75rem;white-space:nowrap}
 .download:hover{background:#ffd666}
+/* one button, two labels: Download PDF on computers, View Full Screen on phones and tablets */
+.lbl-touch{display:none}
+@media (hover:none) and (pointer:coarse){.lbl-desk{display:none}.lbl-touch{display:inline}}
 
 /* the book: swipe sideways between whole pages */
 .wrapbook{flex:1;min-height:0;position:relative}
