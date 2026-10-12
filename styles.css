@@ -58,7 +58,10 @@ a:hover{text-decoration-color:var(--gold)}
 .hero h1{font-family:var(--display);font-weight:300;font-size:min(5.5rem,calc((100vw - 2.5rem) / 8.2));white-space:nowrap;line-height:.98;margin:0 0 .6rem;letter-spacing:-.01em;font-variation-settings:"opsz" 144}
 .hero .dates{font-family:var(--display);font-weight:300;font-size:clamp(1.2rem,2.6vw,1.55rem);color:var(--lavender);margin:0 0 1.4rem}
 .hero .lede{font-size:1.25rem;max-width:40ch;margin:0 0 1.75rem;font-style:italic;color:var(--ivory-dim)}
-.hero .quick{display:flex;flex-wrap:wrap;gap:.6rem}
+/* hero buttons: an even grid, one column on phones, 2 x 2 from small tablets up */
+.hero .quick{display:grid;grid-template-columns:minmax(0,1fr);gap:.6rem;max-width:31rem}
+.hero .quick .btn{text-align:center}
+@media (min-width:30rem){.hero .quick{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .btn{display:inline-block;padding:.7rem 1.1rem;border:1px solid rgba(246,241,231,.4);border-radius:999px;text-decoration:none;font-size:1rem;color:var(--ivory)}
 .btn:hover{border-color:var(--gold)}
 .btn.gold{background:var(--gold);color:var(--purple-ink);border-color:var(--gold);font-weight:500}
