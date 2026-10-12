@@ -1,97 +1,82 @@
-/* Funeral Mass Program: a page-at-a-time reader for phones, with the PDF to download */
+/* Funeral Mass Program booklet.
+   Each page is laid out at its true printed size (5.5 x 8.5 in) and scaled to fit the screen,
+   so a whole page is always visible without scrolling, and the screen matches the PDF exactly.
+   The PDF download is printed from this same page: see README.md. */
 :root{
   --plum:#4E2951; --plum-deep:#3B1E3D; --ink:#2A1429; --ivory:#F6F1E7; --lavender:#CDB4CF; --gold:#FFC62F;
   --paper:#FBF8F1; --paper-ink:#2A1429; --paper-plum:#4E2951; --paper-gold:#7A5A1E; --paper-muted:#6B5A6C; --rule:#B8955A;
   --display:"Fraunces", Georgia, "Times New Roman", serif;
   --body:"Lora", Georgia, "Times New Roman", serif;
-  --bar:3.5rem;
+  --s:.6; /* page scale, set by the script to fit the screen */
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;background:linear-gradient(160deg,#57305B 0%,var(--plum-deep) 100%) fixed;color:var(--ivory);font-family:var(--body);font-size:1.125rem;line-height:1.6;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden}
+body{margin:0;background:linear-gradient(160deg,#57305B 0%,var(--plum-deep) 100%) fixed;color:var(--ivory);font-family:var(--body);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
 a{color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* top bar */
-.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:var(--bar);padding:.4rem max(1rem,env(safe-area-inset-left));background:rgba(59,30,61,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(246,241,231,.14)}
+.bar{flex:none;display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.25rem;padding:.3rem max(1rem,env(safe-area-inset-left));background:rgba(59,30,61,.94);border-bottom:1px solid rgba(246,241,231,.14)}
 .back{text-decoration:none;font-size:1rem;display:inline-flex;align-items:center;gap:.35rem;min-height:2.75rem}
-.download{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;padding:.55rem 1rem;border-radius:999px;min-height:2.75rem;white-space:nowrap}
+.download{display:inline-flex;align-items:center;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;padding:.5rem 1rem;border-radius:999px;min-height:2.75rem;white-space:nowrap}
 .download:hover{background:#ffd666}
 
-/* the book: one page per screen, swipe or use the buttons */
-.book{flex:1;min-height:0;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none}
+/* the book: swipe sideways between whole pages */
+.wrapbook{flex:1;min-height:0;position:relative}
+.book{height:100%;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;touch-action:pan-x pinch-zoom}
 .book::-webkit-scrollbar{display:none}
-.leaf{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;overflow-y:auto;padding:1rem 1rem 1.5rem;display:flex;justify-content:center;align-items:flex-start}
-.paper{width:min(100%,34rem);background:var(--paper);color:var(--paper-ink);border-radius:.4rem;box-shadow:0 18px 40px rgba(20,8,20,.4);padding:2.25rem 1.6rem 1.75rem;position:relative;outline:1px solid var(--rule);outline-offset:-.6rem}
-.folio{text-align:center;color:var(--paper-muted);font-size:.9rem;margin:1.75rem 0 0}
+.leaf{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:.5rem}
 
-/* type */
-.label{font-family:var(--body);text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;color:var(--paper-gold);text-align:center;margin:0 0 .5rem}
-.paper h1,.paper h2{font-family:var(--display);font-weight:400;color:var(--paper-plum);line-height:1.1;text-align:center;margin:0 0 .75rem}
-.paper h1{font-size:clamp(2rem,8.5vw,2.6rem)}
-.paper h2{font-size:clamp(1.7rem,7vw,2.1rem)}
-.paper h3{font-family:var(--body);text-transform:uppercase;letter-spacing:.16em;font-size:.82rem;font-weight:500;color:var(--paper-gold);margin:1.6rem 0 .5rem;padding-bottom:.35rem;border-bottom:1px solid var(--rule)}
-.paper p{margin:0 0 1rem}
+/* one printed page: 5.5 x 8.5 in */
+.paper{flex:none;zoom:var(--s);width:5.5in;height:8.5in;display:flex;flex-direction:column;background:var(--paper);color:var(--paper-ink);font-size:10pt;line-height:1.4;padding:.55in .5in .45in;outline:1px solid var(--rule);outline-offset:-.25in;box-shadow:0 18px 40px rgba(20,8,20,.45)}
+.paper .folio{margin:auto 0 0;text-align:center;color:var(--paper-muted);font-size:9pt}
+
+/* type on the page */
+.label{text-transform:uppercase;letter-spacing:.2em;font-size:7.5pt;color:var(--paper-gold);text-align:center;margin:0 0 .5rem}
+.paper h1,.paper h2{font-family:var(--display);font-weight:400;color:var(--paper-plum);line-height:1.1;text-align:center;margin:0 0 .35rem}
+.paper h1{font-size:24pt}
+.paper h2{font-size:19pt}
+.paper h3{text-transform:uppercase;letter-spacing:.16em;font-size:7.5pt;font-weight:500;color:var(--paper-gold);margin:.85rem 0 .3rem;padding-bottom:.2rem;border-bottom:1px solid var(--rule)}
+.paper p{margin:0 0 .6rem}
 .center{text-align:center}
 .nw{white-space:nowrap}
-.sub{font-style:italic;color:var(--paper-plum);text-align:center}
-.small{font-size:1rem;color:var(--paper-muted)}
-.divider{display:block;width:9rem;height:.8rem;margin:1rem auto;background:linear-gradient(var(--rule),var(--rule)) left center/40% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) right center/40% 1px no-repeat}
+.sub{font-style:italic;color:var(--paper-plum);text-align:center;font-size:11pt}
+.divider{display:block;width:9rem;height:.8rem;margin:.7rem auto;background:linear-gradient(var(--rule),var(--rule)) left center/40% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) right center/40% 1px no-repeat}
 .divider::after{content:"";display:block;width:.5rem;height:.5rem;margin:0 auto;transform:translateY(.15rem) rotate(45deg);border:1px solid var(--rule)}
 .cross{display:block;margin:0 auto .75rem;color:var(--paper-plum)}
-.dropcap::first-letter{font-family:var(--display);font-size:3.4em;float:left;line-height:.8;padding:.08em .1em 0 0;color:var(--paper-plum)}
-.pull{font-family:var(--display);font-style:italic;font-size:1.3rem;line-height:1.35;color:var(--paper-plum);text-align:center;margin:1.4rem .5rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.photo{margin:1.25rem 0}
+.photo{margin:.9rem 0}
 .photo img{display:block;width:100%;height:auto;border-radius:.3rem;border:1px solid var(--rule)}
 .tba{font-style:italic;color:var(--paper-muted)}
-
-/* lists: order of service and at a glance */
 .rows{list-style:none;margin:0;padding:0}
-.rows li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.45rem 0;border-bottom:1px solid rgba(184,149,90,.35)}
-.rows li span:last-child{font-style:italic;text-align:right;color:var(--paper-muted)}
-.glance{list-style:none;margin:0;padding:1rem 1.1rem;background:#F3ECDF;border-radius:.3rem}
-.glance li{padding:.4rem 0;border-bottom:1px solid rgba(184,149,90,.35)}
-.glance li:last-child{border:0}
-.glance b{display:block;font-weight:500;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-gold)}
-.reading{margin:0 0 1.25rem}
+.rows li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.16rem 0;border-bottom:1px solid rgba(184,149,90,.35)}
+.rows li span:last-child{font-style:italic;text-align:right;color:var(--paper-muted);font-size:9.5pt}
+.reading{margin:0 0 1rem}
 .reading .ref{font-style:italic;color:var(--paper-plum);margin:0 0 .3rem}
-.notice{border-left:4px solid var(--rule);background:#F3ECDF;padding:.75rem .9rem;margin:0 0 1rem;border-radius:0 .3rem .3rem 0}
-.signoff{font-style:italic;text-align:center;color:var(--paper-plum)}
-.prayer{font-family:var(--display);font-style:italic;font-size:1.35rem;line-height:1.45;color:var(--paper-plum);text-align:center;margin:2rem .5rem}
-.site{font-family:var(--display);font-size:1.3rem;color:var(--paper-plum)}
+.paper a{text-decoration:none}
 
-/* page controls */
-.controls{position:sticky;bottom:0;z-index:5;display:flex;align-items:center;justify-content:center;gap:.75rem;padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(59,30,61,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(246,241,231,.14)}
-.turn{background:none;border:1px solid rgba(246,241,231,.45);color:var(--ivory);font:inherit;font-size:1rem;border-radius:999px;padding:.5rem 1rem;min-height:2.75rem;min-width:6.5rem;cursor:pointer}
-.turn:hover:not([disabled]){border-color:var(--gold)}
-.turn[disabled]{opacity:.4;cursor:default}
-.count{min-width:6.5rem;text-align:center;font-size:1rem;color:var(--lavender)}
-.hint{text-align:center;font-size:.9rem;color:var(--lavender);margin:.25rem 0 0}
+/* page dots: a slim strip instead of buttons */
+.dots{flex:none;display:flex;justify-content:center;align-items:center;gap:.55rem;height:1.6rem;padding-bottom:env(safe-area-inset-bottom)}
+.dot{width:.5rem;height:.5rem;border-radius:50%;background:rgba(246,241,231,.35)}
+.dot.on{background:var(--ivory)}
 
-@media (min-width:46rem){.paper{padding:3rem 2.75rem 2.25rem}.leaf{padding:2rem}}
+/* side arrows for mouse users only (a mouse can't swipe); hidden on phones and tablets */
+.turn{display:none}
+@media (hover:hover) and (pointer:fine){
+  .turn{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);width:3rem;height:3rem;border-radius:50%;border:1px solid rgba(246,241,231,.45);background:rgba(59,30,61,.6);color:var(--ivory);font-size:1.6rem;line-height:1;cursor:pointer;z-index:2}
+  .turn:hover:not([disabled]){border-color:var(--gold)}
+  .turn[disabled]{opacity:0;pointer-events:none}
+  .turn.prev{left:1rem}.turn.next{right:1rem}
+}
 @media (prefers-reduced-motion:reduce){.book{scroll-behavior:auto}}
 
-/* Print = the downloadable PDF: one booklet page per half-letter sheet (5.5 x 8.5 in).
-   Regenerate the PDF with the command in README.md after any change to this page. */
+/* print = the downloadable PDF */
 @page{size:5.5in 8.5in;margin:0}
 @media print{
-  html,body{height:auto;overflow:visible}
-  body{background:#fff;display:block;font-size:10pt;line-height:1.4;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .bar,.controls,.hint{display:none}
-  .book{display:block;overflow:visible}
+  html,body{height:auto;overflow:visible;display:block;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .bar,.dots,.turn{display:none!important}
+  .wrapbook,.book{display:block;overflow:visible;height:auto}
   .leaf{display:block;overflow:hidden;padding:0;width:5.5in;height:8.5in;break-after:page;page-break-after:always}
   .leaf:last-child{break-after:auto;page-break-after:auto}
-  .paper{box-shadow:none;width:5.5in;height:8.5in;border-radius:0;padding:.55in .5in .45in;outline:1px solid var(--rule);outline-offset:-.25in;display:flex;flex-direction:column}
-  .paper .folio{margin-top:auto;font-size:9pt}
-  .paper h1{font-size:24pt}.paper h2{font-size:19pt}
-  .label,.paper h3{font-size:7.5pt}
-  .sub{font-size:11pt}
-  .small,.rows li span:last-child{font-size:9.5pt}
-  .rows li{padding:.16rem 0}
-  .paper h3{margin:.85rem 0 .3rem;padding-bottom:.2rem}
-  .paper h2{margin-bottom:.35rem}
-  .paper p{margin-bottom:.6rem}
-  .photo{margin:.9rem 0}
-  .divider{margin:.7rem auto}
-  a{text-decoration:none}
+  .paper{zoom:1!important;box-shadow:none}
 }

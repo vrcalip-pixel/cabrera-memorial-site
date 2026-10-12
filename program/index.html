@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="book.css?v=4">
+<link rel="stylesheet" href="book.css?v=6">
 </head>
 <body>
 <!-- Web version of the printed program (program/patrick-cabrera-funeral-mass-program.pdf).
@@ -17,10 +17,13 @@
 
 <header class="bar">
   <a class="back" href="../"><span aria-hidden="true">←</span> Home</a>
-  <a class="download" href="patrick-cabrera-funeral-mass-program.pdf" download title="PDF, 2.4 MB">Download PDF</a>
+  <a class="download" href="patrick-cabrera-funeral-mass-program.pdf" download title="PDF, about 300 KB">Download PDF</a>
 </header>
 
-<main class="book" id="book" tabindex="0" aria-label="Funeral Mass Program, 3 pages. Swipe or use the Previous and Next buttons to turn pages.">
+<div class="wrapbook">
+<button class="turn prev" type="button" id="prev" aria-controls="book" aria-label="Previous page">‹</button>
+<button class="turn next" type="button" id="next" aria-controls="book" aria-label="Next page">›</button>
+<main class="book" id="book" tabindex="0" aria-label="Funeral Mass Program, 3 pages. Swipe left or right to turn pages.">
 
   <article class="leaf" id="page-1" aria-label="Page 1 of 3: Cover">
     <div class="paper center">
@@ -91,20 +94,26 @@
   </article>
 
 </main>
+</div>
 
-<nav class="controls" aria-label="Turn pages">
-  <button class="turn" type="button" id="prev" aria-controls="book"><span aria-hidden="true">‹</span> Previous</button>
-  <span class="count" id="count" aria-live="polite">Page 1 of 3</span>
-  <button class="turn" type="button" id="next" aria-controls="book">Next <span aria-hidden="true">›</span></button>
-</nav>
+<div class="dots" aria-hidden="true"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+<p class="sr-only" id="count" aria-live="polite">Page 1 of 3</p>
 
 <script>
-// Page turning: buttons, arrow keys, swipe (native scroll-snap), and #page-N links.
+// Fit each page to the screen, and turn pages by swiping (native scroll-snap),
+// side arrows (mouse users only), arrow keys, or #page-N links.
 (function(){
   var book=document.getElementById('book'), leaves=[].slice.call(book.querySelectorAll('.leaf')),
-      prev=document.getElementById('prev'), next=document.getElementById('next'), count=document.getElementById('count'), n=leaves.length, cur=0;
-  function show(i){ cur=i; count.textContent='Page '+(i+1)+' of '+n; prev.disabled=i===0; next.disabled=i===n-1; }
-  // While a button/arrow turn animates, the scroll listener must not read the half-way position.
+      prev=document.getElementById('prev'), next=document.getElementById('next'), count=document.getElementById('count'),
+      dots=[].slice.call(document.querySelectorAll('.dot')), n=leaves.length, cur=0;
+  var PAGE_W=528, PAGE_H=816; // 5.5 x 8.5 in at 96 CSS px per inch
+  function fit(){
+    var w=leaves[0].clientWidth-16, h=leaves[0].clientHeight-16;
+    document.documentElement.style.setProperty('--s', Math.max(.2, Math.min(w/PAGE_W, h/PAGE_H)).toFixed(4));
+  }
+  function show(i){ cur=i; count.textContent='Page '+(i+1)+' of '+n; prev.disabled=i===0; next.disabled=i===n-1;
+    dots.forEach(function(d,k){ d.classList.toggle('on',k===i); }); }
+  // While an arrow turn animates, the scroll listener must not read the half-way position.
   var turning=0;
   function jump(x){ book.style.scrollBehavior='auto'; book.scrollLeft=x; book.style.scrollBehavior=''; }
   function go(i){
@@ -113,17 +122,19 @@
     // If the animated turn hasn't arrived (some browsers skip it), land on the page directly.
     turning=setTimeout(function(){ if(Math.abs(book.scrollLeft-x)>2) jump(x); turning=0; },700);
     book.scrollTo({left:x,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-    leaves[i].scrollTop=0; history.replaceState(null,'','#page-'+(i+1)); show(i);
+    history.replaceState(null,'','#page-'+(i+1)); show(i);
   }
   prev.addEventListener('click',function(){ go(cur-1); });
   next.addEventListener('click',function(){ go(cur+1); });
-  document.addEventListener('keydown',function(e){ if(e.target.closest && e.target.closest('input,textarea,select'))return; if(e.key==='ArrowRight'){e.preventDefault();go(cur+1);} if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1);} });
+  document.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){e.preventDefault();go(cur+1);} if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1);} });
   // Swipes: once scrolling settles, take the page nearest the centre.
   function settle(){ if(turning) return; var i=Math.round(book.scrollLeft/book.clientWidth); if(i!==cur){ show(i); history.replaceState(null,'','#page-'+(i+1)); } }
   var t; book.addEventListener('scroll',function(){ if(turning) return; clearTimeout(t); t=setTimeout(settle,150); },{passive:true});
   book.addEventListener('scrollend',settle);
-  var m=location.hash.match(/^#page-(\d+)$/); if(m){ var i=Math.max(0,Math.min(n-1,m[1]-1)); book.style.scrollBehavior='auto'; book.scrollLeft=leaves[i].offsetLeft; book.style.scrollBehavior=''; show(i); } else show(0);
-  window.addEventListener('resize',function(){ jump(leaves[cur].offsetLeft); });
+  fit();
+  var m=location.hash.match(/^#page-(\d+)$/); if(m){ var i=Math.max(0,Math.min(n-1,m[1]-1)); jump(leaves[i].offsetLeft); show(i); } else show(0);
+  window.addEventListener('resize',function(){ fit(); jump(leaves[cur].offsetLeft); });
+  if(document.fonts) document.fonts.ready.then(fit);
 })();
 </script>
 </body>
