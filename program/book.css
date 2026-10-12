@@ -71,11 +71,27 @@ a{color:inherit}
 @media (min-width:46rem){.paper{padding:3rem 2.75rem 2.25rem}.leaf{padding:2rem}}
 @media (prefers-reduced-motion:reduce){.book{scroll-behavior:auto}}
 
-/* printing from this page prints every page in order (the PDF is the better print copy) */
+/* Print = the downloadable PDF: one booklet page per half-letter sheet (5.5 x 8.5 in).
+   Regenerate the PDF with the command in README.md after any change to this page. */
+@page{size:5.5in 8.5in;margin:0}
 @media print{
-  body{background:#fff;display:block;height:auto;overflow:visible}
+  html,body{height:auto;overflow:visible}
+  body{background:#fff;display:block;font-size:10pt;line-height:1.4;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .bar,.controls,.hint{display:none}
   .book{display:block;overflow:visible}
-  .leaf{display:block;overflow:visible;padding:0;page-break-after:always}
-  .paper{box-shadow:none;width:auto;outline:0}
+  .leaf{display:block;overflow:hidden;padding:0;width:5.5in;height:8.5in;break-after:page;page-break-after:always}
+  .leaf:last-child{break-after:auto;page-break-after:auto}
+  .paper{box-shadow:none;width:5.5in;height:8.5in;border-radius:0;padding:.55in .5in .45in;outline:1px solid var(--rule);outline-offset:-.25in;display:flex;flex-direction:column}
+  .paper .folio{margin-top:auto;font-size:9pt}
+  .paper h1{font-size:24pt}.paper h2{font-size:19pt}
+  .label,.paper h3{font-size:7.5pt}
+  .sub{font-size:11pt}
+  .small,.rows li span:last-child{font-size:9.5pt}
+  .rows li{padding:.16rem 0}
+  .paper h3{margin:.85rem 0 .3rem;padding-bottom:.2rem}
+  .paper h2{margin-bottom:.35rem}
+  .paper p{margin-bottom:.6rem}
+  .photo{margin:.9rem 0}
+  .divider{margin:.7rem auto}
+  a{text-decoration:none}
 }

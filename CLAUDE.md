@@ -86,10 +86,10 @@ phones), then About Patrick (Vince, 2026-10-11).
    (lightbox optional, not required).
 4. **Funeral Mass Program** — digital version of the printed program: order of service,
    readings, celebrants, acknowledgments. Printable with `@media print`.
-   Full program subpage: `/program/` (program/index.html + book.css), a
-   page-at-a-time reader built from Vince's PDF draft, with the PDF to download
-   (program/patrick-cabrera-funeral-mass-program.pdf). When Vince sends a new PDF,
-   replace the file and update the matching pages in program/index.html.
+   Program booklet subpage: `/program/` (program/index.html + book.css), three
+   pages only — cover with the hero family photo, Order of Service, Readings
+   (trimmed at Vince's request, 2026-10-12). The PDF download is generated from
+   it with `program/make-pdf.ps1` (headless Edge, half-letter); rerun after any edit.
 5. **Share a Memory** — short form: name, relationship, memory (textarea),
    optional photo upload if Netlify Forms allows; otherwise text only.
 6. **Give** — one paragraph + one button to `giving.url`. Hide the section
