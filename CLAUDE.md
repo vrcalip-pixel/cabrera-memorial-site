@@ -136,7 +136,7 @@ phones), then About Patrick (Vince, 2026-10-11).
   Communion when Fr. Tuan invites; Song of Farewell; reception in the church hall.
   Rosary time (9:00) not discussed: still to confirm.
 - Readings: ✅ Wisdom 3:1–9, Psalm 23 (The Lord Is My Shepherd), Romans 6:3–4, 8–9.
-  Still TBD: Gospel passage, readers, hymn titles (Joe and Kyle are choosing).
+  Still TBD: Gospel passage, readers, hymn titles and the singers' full names (Vince is asking).
 - "Survived by" names in `content/bio.md`: children added 2026-10-12 (Gina, Bella,
   Vincent, Isaac, Roxy, Monique, oldest to youngest); grandchildren and siblings
   still unnamed by choice
