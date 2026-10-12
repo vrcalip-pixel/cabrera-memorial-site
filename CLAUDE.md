@@ -134,7 +134,9 @@ phones), then About Patrick (Vince, 2026-10-11).
 - Rosary time (9:00 vs 9:15) and placement of Words of Remembrance confirmed
   with Father Tuan (`program.*`)
 - Readers, readings, hymns filled in or section labeled "to be announced"
-- "Survived by" names complete in `content/bio.md`
+- "Survived by" names in `content/bio.md`: children added 2026-10-12 (Gina, Bella,
+  Vincent, Isaac, Roxy, Monique, oldest to youngest); grandchildren and siblings
+  still unnamed by choice
 - Parish name in Piti verified with Uncle Joey (Assumption of Our Lady)
 - Test on an iPhone over cellular; test "Add to calendar" on iOS and Android
 - Run axe / Lighthouse accessibility; fix anything below AA
