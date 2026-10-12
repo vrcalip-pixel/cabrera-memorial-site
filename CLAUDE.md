@@ -144,4 +144,8 @@ phones), then About Patrick (Vince, 2026-10-11).
 - He will paste updates from the family and from Father Tuan as plain text.
   Apply them to `data.json` / `content/*.md` only, then rebuild. Confirm what
   changed in one line.
+- Program/service updates must land everywhere they appear: `data.json`
+  (event cards + calendar files), the landing page program section
+  (`template.html`), the booklet at `program/index.html`, and the PDF download.
+  Grep for the old value before calling it done.
 - Prefer the smallest change. He is shipping this in days, not weeks.
