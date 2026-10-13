@@ -80,8 +80,9 @@ phones), then About Patrick (Vince, 2026-10-11).
    data.json, three event cards (date · time · venue · "Get directions" ·
    "Add to calendar"). Burial card carries the arrive-early warning verbatim.
 2. **Services** — full detail per event, embedded map link (Google/Apple), what
-   to expect (rosary before Mass, open casket for family only until 10:00,
-   military honors at the cemetery). Pull all copy from data.json.
+   to expect (viewing and burial cards). The Funeral Mass card has no "what to
+   expect" list: the program beside it covers that (Vince, 2026-10-13). Before
+   Mass, the open casket is for anyone to pay respects ("Time to Pay Respects"). Pull all copy from data.json.
 3. **About Patrick** — `content/bio.md` rendered, then photo gallery
    (lightbox optional, not required).
 4. **Funeral Mass Program** — digital version of the printed program: order of service,

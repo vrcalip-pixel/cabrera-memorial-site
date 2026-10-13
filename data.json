@@ -57,12 +57,7 @@
         "Rev. Hendry (surname TBD)"
       ],
       "parishContact": "Darlene, Lazarus Ministry (contact TBD)",
-      "whatToExpect": [
-        "9:00 AM — the Rosary, led by Monique Chapman.",
-        "The casket is open for family to pay their respects until Mass begins.",
-        "10:00 AM — Vincent Calip shares words of remembrance. Father then blesses the casket, and the procession to the altar begins the Mass.",
-        "After Communion, family members may share a few words when Father invites them."
-      ],
+      "whatToExpect": [],
       "reception": "A reception follows in the church hall. Father will announce it at the end of Mass.",
       "notes": "Please arrive by 9:30 AM so you are seated before Mass begins."
     },
@@ -105,7 +100,7 @@
       },
       {
         "label": "Gospel",
-        "ref": "TBD — Gospel passage not yet confirmed"
+        "ref": "Read by Fr. Tuan (passage not yet confirmed)"
       }
     ],
     "orderOfService": [
@@ -116,8 +111,8 @@
       },
       {
         "section": "Before Mass · 9:00 AM",
-        "item": "Family Time with Patrick",
-        "detail": "Until Mass begins"
+        "item": "Time to Pay Respects",
+        "detail": "All are welcome, until Mass begins"
       },
       {
         "section": "Opening Rites · 10:00 AM",
@@ -132,7 +127,7 @@
       {
         "section": "Opening Rites · 10:00 AM",
         "item": "Opening Hymn and Procession",
-        "detail": "Hymn TBD"
+        "detail": ""
       },
       {
         "section": "Opening Rites · 10:00 AM",
@@ -157,12 +152,12 @@
       {
         "section": "Liturgy of the Word",
         "item": "Gospel Acclamation",
-        "detail": "Sung · TBD"
+        "detail": ""
       },
       {
         "section": "Liturgy of the Word",
         "item": "Gospel",
-        "detail": "Fr. Tuan · reading TBD"
+        "detail": "Fr. Tuan"
       },
       {
         "section": "Liturgy of the Word",
