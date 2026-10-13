@@ -13,4 +13,5 @@ The booklet at `/program/` (cover, Order of Service, Readings) lives in
 
     powershell -ExecutionPolicy Bypass -File program\make-pdf.ps1
 
-Then commit and push both files.
+It also stamps the PDF link with a version, so phones always get the newest PDF.
+Then commit and push the program folder.
