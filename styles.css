@@ -131,6 +131,14 @@ p{margin:0 0 1.1rem;max-width:68ch}
 @media (min-width:60rem){.plan{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;padding-inline:calc((100% - var(--page)) / 2);border-top:1px solid rgba(246,241,231,.14)}.plan > section{border-top:0}.plan .wrap{width:auto}.plan .program{grid-template-columns:1fr;gap:2.5rem}#program{background:var(--purple-deep);border-radius:.6rem;padding:2.25rem 2rem;margin:1.25rem 0 3.5rem}.plan h2{font-size:2.5rem;white-space:nowrap}}
 .order{list-style:none;margin:0;padding:0}
 .order li{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.6rem 0;border-bottom:1px solid rgba(246,241,231,.12);align-items:baseline}
+.order li span:last-child a{color:inherit}
+/* family thanks: one centred block under Services and the Program, spanning both columns on desktop */
+.thanks{text-align:center;border-top:1px solid rgba(246,241,231,.14)}
+.thanks .wrap > *{max-width:46rem;margin-left:auto;margin-right:auto}
+.thanks h2{margin-bottom:.5rem}
+.thanks .lede-small{margin-top:1.25rem}
+.plan > .thanks{border-top:1px solid rgba(246,241,231,.14)}
+@media (min-width:60rem){.plan > .thanks{grid-column:1 / -1;padding:3rem 0 3.5rem}}
 .order li span:last-child{font-size:.95rem;color:var(--lavender);text-align:right;max-width:18rem}
 .scripture{font-style:italic;color:var(--ivory-dim);margin:1rem 0 .25rem}
 .scripture a{color:var(--ivory)}
