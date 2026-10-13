@@ -290,5 +290,105 @@
       "Pallbearers",
       "Portrait in About (awaiting better photo)"
     ]
+  },
+  "survivedBy": {
+    "show": true,
+    "_source": "Birth order and the list of brothers and sisters confirmed by Uncle Joey (2026-10-13): Frank, Terry, Arthur, Patrick, Martha, Marlene, Anthony, Marie, Gerald, Joseph. Spouses and who has passed from the 2019 obituary for Anthony Reyes Cabrera, confirmed accurate by Joey. Formal names only (Vince).",
+    "intro": "Patrick is survived by his wife, Mary; his children and grandchildren; his brothers and sisters; and many nieces, nephews, and cousins in Washington, Guam, and beyond.",
+    "patrick": {
+      "name": "Patrick",
+      "surname": "Cabrera",
+      "spouse": "Mary",
+      "deceased": true
+    },
+    "children": [
+      {
+        "name": "Regina",
+        "surname": "Calip"
+      },
+      {
+        "name": "Bella",
+        "surname": "Calip"
+      },
+      {
+        "name": "Vincent",
+        "surname": "Calip"
+      },
+      {
+        "name": "Isaac",
+        "spouse": "Val",
+        "surname": "Cabrera"
+      },
+      {
+        "name": "Roxanne",
+        "spouse": "Sin",
+        "surname": "Sou"
+      },
+      {
+        "name": "Monique",
+        "spouse": "Joseph",
+        "surname": "Chapman"
+      }
+    ],
+    "parents": {
+      "name": "Jose Quenga",
+      "surname": "Cabrera",
+      "spouse": "Ignacia Reyes",
+      "deceased": true,
+      "spouseDeceased": true
+    },
+    "siblings": [
+      {
+        "name": "Frank",
+        "surname": "Cabrera"
+      },
+      {
+        "name": "Terry",
+        "surname": "Duenas",
+        "spouse": "Frank"
+      },
+      {
+        "name": "Arthur",
+        "surname": "Cabrera",
+        "deceased": true
+      },
+      {
+        "name": "Patrick",
+        "surname": "Cabrera",
+        "spouse": "Mary",
+        "deceased": true,
+        "self": true
+      },
+      {
+        "name": "Martha",
+        "surname": "Camacho",
+        "spouse": "Anthony"
+      },
+      {
+        "name": "Marlene",
+        "surname": "Cabrera"
+      },
+      {
+        "name": "Anthony",
+        "surname": "Cabrera",
+        "deceased": true
+      },
+      {
+        "name": "Marie",
+        "surname": "Fegurgur",
+        "spouse": "Tomas"
+      },
+      {
+        "name": "Gerald",
+        "surname": "Cabrera",
+        "deceased": true
+      },
+      {
+        "name": "Joseph",
+        "surname": "Cabrera",
+        "spouse": "Doreen"
+      }
+    ],
+    "closing": "and many nieces, nephews, and cousins in Washington, Guam, and beyond."
   }
 }

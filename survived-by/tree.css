@@ -1,0 +1,56 @@
+/* Survived By: a soft family tree, built by build.js from data.json.survivedBy */
+:root{
+  --plum:#4E2951; --plum-deep:#3B1E3D; --ink:#2A1429; --ivory:#F6F1E7; --ivory-dim:#E3D8E2; --lavender:#CDB4CF; --gold:#FFC62F;
+  --paper:#FBF8F1; --paper-plum:#4E2951; --paper-gold:#7A5A1E; --paper-muted:#6B5A6C; --rule:#B8955A;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Lora", Georgia, "Times New Roman", serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(160deg,#57305B 0%,var(--plum-deep) 100%) fixed;color:var(--ivory);font-family:var(--body);font-size:1.125rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
+a{color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:3.25rem;padding:.3rem max(1rem,env(safe-area-inset-left));background:rgba(59,30,61,.94);border-bottom:1px solid rgba(246,241,231,.14)}
+.back{text-decoration:none;font-size:1rem;display:inline-flex;align-items:center;gap:.35rem;min-height:2.75rem}
+
+main{width:min(100% - 2rem, 64rem);margin:0 auto;padding:2.5rem 0 4rem}
+h1{font-family:var(--display);font-weight:300;font-size:clamp(2.2rem,7vw,3.2rem);line-height:1.05;margin:0 0 .75rem;text-align:center}
+.intro{max-width:40rem;margin:0 auto 1rem;text-align:center;color:var(--ivory-dim)}
+.legend{text-align:center;font-size:.95rem;color:var(--lavender);margin:0 0 2.5rem}
+
+/* each tree: one card on top, a gold stem, then a row of cards */
+.tree{margin:0 0 3.5rem}
+.tree h2{font-family:var(--display);font-weight:300;font-size:clamp(1.6rem,5vw,2.1rem);text-align:center;margin:0 0 1.25rem}
+.tree ul{list-style:none;margin:0;padding:0}
+.root{display:flex;flex-direction:column;align-items:center}
+.root > .card{width:auto;height:auto}
+.tree .root > .kids{width:100%;margin-top:2.25rem}
+.kids{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.25rem;padding-top:1.25rem}
+.kids::before{content:"";position:absolute;top:-2.25rem;left:50%;width:1px;height:2.25rem;background:var(--rule)}
+.kids::after{content:"";position:absolute;top:0;left:12%;right:12%;height:1px;background:var(--rule)}
+.kids > li{position:relative;flex:0 1 13.5rem}
+
+.card{background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:.6rem;padding:.9rem 1rem;text-align:center;box-shadow:0 10px 24px rgba(20,8,20,.28);height:100%}
+.card .name{font-family:var(--display);font-size:1.25rem;line-height:1.2;color:var(--paper-plum);display:block}
+.card .with{display:block;font-size:1rem;color:var(--paper-muted);font-style:italic}
+.root .card{min-width:16rem;padding:1.1rem 1.5rem}
+.card.self{background:var(--plum);color:var(--ivory);border:2px solid var(--gold)}
+.card.self .name{color:var(--ivory)}
+.card.self .with,.card.self .note{color:var(--ivory-dim)}
+.card .note{display:block;font-size:.95rem;color:var(--paper-muted);margin-top:.2rem}
+.card.preceded{background:#EFE7DB}
+.later{margin:1.5rem auto 0;text-align:center;color:var(--lavender);font-style:italic}
+
+/* phones: two cards per row and a single centre stem, no side rail */
+@media (max-width:40rem){
+  .kids{gap:.75rem}
+  .kids::after{display:none}
+  .kids > li{flex:0 1 calc(50% - .4rem)}
+  .kids > li::before{display:none}
+  .card .name{font-size:1.15rem}
+  .root .card{min-width:0;width:100%}
+}
+.cross-mark{color:var(--paper-gold)}
+.card.self .cross-mark{color:var(--gold)}
+.card .with{margin-top:.15rem}

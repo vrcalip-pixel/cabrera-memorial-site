@@ -95,6 +95,10 @@ phones), then About Patrick (Vince, 2026-10-11).
    optional photo upload if Netlify Forms allows; otherwise text only.
 6. **Give** — one paragraph + one button to `giving.url`. Hide the section
    entirely while `giving.url` is TBD.
+6b. **Survived By** (`/survived-by/`, in the nav): soft family tree built by
+   build.js from `data.json.survivedBy` (survived-by/tree.css). Replaces the bio's
+   survived-by paragraph. Full names with spouses, ✝ for those who have passed,
+   no dates, no nieces/nephews. Sibling order from Uncle Joey (2026-10-13).
 7. **Family** (`/family`, unlisted, no password) — arrivals, who's staying
    where, contact for logistics. Only build if `family.show` is true.
 8. ~~Updates~~ — removed at Vince's request. Don't add it back.
@@ -139,9 +143,8 @@ phones), then About Patrick (Vince, 2026-10-11).
 - Readings: ✅ Wisdom 3:1–9, Psalm 23 (The Lord Is My Shepherd), Romans 6:3–4, 8–9.
   First reader: Roxanne Sou. Second reader: Isaac Cabrera. Rosary led by Monique
   Chapman. Still TBD: Gospel passage, prayer texts (Vince asking Mary), hymn titles and the singers' full names (Vince is asking).
-- "Survived by" names in `content/bio.md`: children added 2026-10-12 (Gina, Bella,
-  Vincent, Isaac, Roxy, Monique, oldest to youngest); grandchildren and siblings
-  still unnamed by choice
+- ✅ Survived By page published 2026-10-13 (Uncle Joey confirmed the siblings and
+  order). Grandchildren not listed, by choice.
 - Parish name in Piti verified with Uncle Joey (Assumption of Our Lady)
 - Test on an iPhone over cellular; test "Add to calendar" on iOS and Android
 - Run axe / Lighthouse accessibility; fix anything below AA
