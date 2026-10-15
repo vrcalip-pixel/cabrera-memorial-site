@@ -15,3 +15,7 @@ The booklet at `/program/` (cover, Order of Service, Readings) lives in
 
 It also stamps the PDF link with a version, so phones always get the newest PDF.
 Then commit and push the program folder.
+
+Mountain View Funeral Home prints this PDF for the Mass and brings the copies
+with the casket to St. John of the Woods, so the PDF must be final before
+their print deadline. Send them the newest file after any change.
