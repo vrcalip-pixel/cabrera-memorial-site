@@ -57,9 +57,11 @@ a{color:inherit}
 .reading{margin:0 0 1rem}
 /* the Order of Service has the most lines: a slightly tighter setting so it stays on one page */
 .paper.dense{font-size:9.5pt;padding-top:.5in}
-.dense .rows li{padding:.1rem 0}
+.dense .rows li{padding:.07rem 0}
+.rows li span:first-child{white-space:nowrap}
+.dense .rows li span:last-child{line-height:1.25}
 .dense .rows li span:last-child{font-size:9pt}
-.paper.dense h3{margin:.6rem 0 .2rem}
+.paper.dense h3{margin:.5rem 0 .15rem}
 .dense .divider{margin:.45rem auto}
 .dense .sub{font-size:10.5pt}
 .paper .after{margin:.7rem 0 0;text-align:center;font-style:italic;color:var(--paper-plum);font-size:9.5pt}

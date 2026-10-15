@@ -146,6 +146,8 @@ phones), then About Patrick (Vince, 2026-10-11).
   Communion when Fr. Tuan invites; Song of Farewell; reception in the church hall.
   Rosary time (9:00) not discussed: still to confirm.
 - Words of Remembrance: Vincent Calip, then Isaac Cabrera (Vince calls him up).
+  The Offertory (gifts): grandchildren Elaina Cabrera, Jaxon Sou, Joe Chapman,
+  Madison Chapman.
 - Readings: ✅ Wisdom 3:1–9, Psalm 23 (The Lord Is My Shepherd), Romans 6:3–4, 8–9.
   First reader: Roxanne Sou. Second reader: Isaac Cabrera. Rosary led by Monique
   Chapman. Still TBD: Gospel passage, prayer texts (Vince asking Mary), hymn titles and the singers' full names (Vince is asking).
