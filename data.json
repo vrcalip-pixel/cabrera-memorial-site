@@ -179,7 +179,7 @@
       {
         "section": "Liturgy of the Eucharist",
         "item": "Holy Communion",
-        "detail": "Hymn TBD"
+        "detail": ""
       },
       {
         "section": "Liturgy of the Eucharist",
@@ -203,10 +203,18 @@
       }
     ],
     "pallbearers": null,
-    "acknowledgments": "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. Special thanks to Father Tuan, Father Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home.",
-    "acknowledgmentsSignoff": "Mary, Regina, Bella, Vincent, Isaac, Roxanne, Monique, and the Cabrera family",
     "_source": "Order of service from Darlene, St. John of the Woods Lazarus Ministry (call with Vince, 2026-10-12). Fr. Tuan may adjust timing on the day.",
-    "music": "Hymn titles and singers TBD (Vince is confirming full names). Responsorial Psalm: The Lord Is My Shepherd (Psalm 23)."
+    "music": "Hymn titles and singers TBD (Vince is confirming full names). Responsorial Psalm: The Lord Is My Shepherd (Psalm 23).",
+    "thanks": {
+      "heading": "Si Yu'os ma'åse'",
+      "meaning": "CHamoru for “thank you” — a wish that God’s mercy be with you.",
+      "paragraphs": [
+        "The family of Patrick Cabrera thanks everyone who has surrounded us with prayers, food, and presence these past weeks. Your kindness reflects the man we are honoring. To the family who traveled to be with us, some of you from Guam, thank you for coming so far.",
+        "Special thanks to Fr. Tuan, Fr. Hendry, the St. John of the Woods Lazarus Ministry, and the staff of Mountain View Funeral Home."
+      ],
+      "signoff": "Mary, Regina, Bella, Vincent, Isaac, Roxanne, Monique, and the Cabrera family",
+      "closingPrayer": "Eternal rest grant unto him, O Lord, and let perpetual light shine upon him. May he rest in peace. Amen."
+    }
   },
   "giving": {
     "show": true,

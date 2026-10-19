@@ -112,3 +112,12 @@ a{color:inherit}
 .paper .cross-mark{color:var(--paper-gold)}.paper .card.self .cross-mark{color:#E8C25A}
 .paper .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .flegend{text-align:center;font-size:8pt;color:var(--paper-muted);margin:.3rem 0 0}
+
+/* cover photo printed at about 3.6 in wide so the 960 px original stays sharp (~270 dpi) */
+.paper.cover .photo{width:3.6in;margin:1.1rem auto}
+/* page 4: back cover, thanks and closing prayer, room left at the bottom for Mountain View's logo */
+.paper.back{text-align:center}
+.paper.back h2{margin-top:.6in}
+.paper.back .ack{margin:0 auto .7rem;max-width:4in}
+.paper.back .signoff{font-style:italic;color:var(--paper-plum);margin:.9rem auto 0;max-width:4in}
+.paper.back .prayer{font-family:var(--display);font-style:italic;font-size:12.5pt;line-height:1.45;color:var(--paper-plum);max-width:3.8in;margin:0 auto}
