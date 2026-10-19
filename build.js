@@ -138,6 +138,8 @@ const giving = !g.show ? '' : [
 
 // Cache-busting: browsers may hold styles.css for 10 minutes on GitHub Pages.
 // Stamping the link with a hash of the file means a new page always loads matching styles.
+// flowers.js (mouse trail) gets the same version stamp, on every page that uses it
+const flowersHash = require('crypto').createHash('sha1').update(fs.readFileSync(path.join(root, 'flowers.js'))).digest('hex').slice(0, 8);
 const cssHash = require('crypto').createHash('sha1').update(fs.readFileSync(path.join(root, 'styles.css'))).digest('hex').slice(0, 8);
 
 // Share a memory: copy and the Formspree endpoint come from data.json
@@ -145,6 +147,7 @@ const m = data.memories || {};
 if (isTBD(m.endpoint)) throw new Error('memories.endpoint (Formspree URL) is missing in data.json');
 
 const html = template
+  .replace('src="flowers.js"', `src="flowers.js?v=${flowersHash}"`)
   .replace('href="styles.css"', `href="styles.css?v=${cssHash}"`)
   .replace('{{memories.headline}}', show(m.headline))
   .replace('{{memories.intro}}', show(m.intro))
@@ -200,6 +203,7 @@ if (sb && sb.show) {
   <p class="intro">${esc(sb.intro)}</p>
   <p class="legend"><span aria-hidden="true">✝</span> has passed away</p>
 ${tree('Patrick & Mary’s family', { ...sb.patrick, self: true }, sb.children, grand)}${tree('His parents, brothers & sisters', parents, sb.siblings, esc(sb.closing).replace(/^and /, 'And '))}</main>
+<script src="../flowers.js?v=${flowersHash}" defer></script>
 </body>
 </html>
 `;
@@ -245,6 +249,7 @@ ${th.paragraphs.map(p => `      <p class="ack">${esc(p)}</p>`).join('\n')}
   </article>
 `;
   booklet = booklet.slice(0, bs) + back + booklet.slice(be);
+  booklet = booklet.replace(/src="\.\.\/flowers\.js(\?v=[0-9a-f]+)?"/, `src="../flowers.js?v=${flowersHash}"`);
   fs.writeFileSync(bookPath, booklet);
 }
 console.log(`Built index.html and ${cards.length} calendar files.`);

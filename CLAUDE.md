@@ -131,6 +131,11 @@ phones), then About Patrick (Vince, 2026-10-11).
   One approved exception (Vince, 2026-10-11): the dove home icon flaps twice on
   page load (under 2 s) and twice on hover/focus. Never a continuous loop (WCAG
   2.2.2); off under prefers-reduced-motion.
+  Second approved exception (Vince, 2026-10-18): `flowers.js`, a trail of small
+  white flowers (plumeria, jasmine, daisy, blossom) that fades in and out behind
+  the mouse on every page. Mouse/trackpad only (not touch), only while the pointer
+  moves, ~1.5 s per flower, max 28 at once, never blocks clicks, aria-hidden, off
+  under prefers-reduced-motion.
 
 ## Launch checklist (block launch on items marked ⛔)
 - ✅ Viewing confirmed: Wed Oct 14, Mountain View Funeral Home, Lakewood
